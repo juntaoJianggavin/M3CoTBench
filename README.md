@@ -50,13 +50,21 @@
 
 This repository is a comprehensive collection of resources for **M3CoTBench**, If you find any work missing or have any suggestions, feel free to pull requests or [contact us](#contact). We will promptly add the missing papers to this repository.
 
+<a name="highlight"></a>
+# ✨ Highlight!!!
+
+Compared with existing multimodal medical benchmarks, our proposed **M3CoTBench** offers the following key advantages:
+
+1. **Diverse Medical VQA Dataset.**  
+   We curate a *1,079-image* medical visual question answering (VQA) dataset spanning *24 imaging modalities*, stratified by difficulty and annotated with *step-by-step reasoning* aligned with real clinical diagnostic workflows.
+2. **Multidimensional CoT-Centric Evaluation Metrics.**  
+   We propose a comprehensive evaluation protocol that measures *reasoning correctness, efficiency, impact, and consistency*, enabling fine-grained and interpretable analysis of CoT behaviors across diverse MLLMs.
+3. **Comprehensive Model Analysis and Case Studies.**  
+   We benchmark both general-purpose and medical-domain MLLMs using quantitative metrics and in-depth qualitative case studies, revealing strengths and failure modes in clinical reasoning to guide future model design.
+
 
 
 **🤓 You can view the scores and comparisons of each method at [M3CoTBench LeaderBoard](https://juntaojianggavin.github.io/projects/M3CoTBench/#leaderboard).**
-
-<a name="highlight"></a>
-
-# ✨ Highlight!!!
 
 # :mailbox_with_mail:Summary of Contents
 
@@ -71,7 +79,6 @@ This repository is a comprehensive collection of resources for **M3CoTBench**, I
 - [Experiments](#experiments)  
   - [Performance Comparison](#performance-score-of-different-methods)  
   - [Quantitative Visualization](#quantitative-visualization)  
-  - [Qualitative Visualization](#quanlitative-visualization)  
 - [Citation](#citation)  
 - [Contact](#contact)  
 
