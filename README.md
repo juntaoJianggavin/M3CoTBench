@@ -77,8 +77,6 @@ Compared with existing multimodal medical benchmarks, our proposed **M3CoTBench*
   - [Download M3CoTBench Database](#2-downloads-the-m3cotbench-database)  
 - [Usage](#usage)  
 - [Experiments](#experiments)  
-  - [Performance Comparison](#performance-score-of-different-methods)  
-  - [Quantitative Visualization](#quantitative-visualization)  
 - [Citation](#citation)  
 - [Contact](#contact)  
 
