@@ -74,7 +74,7 @@ Compared with existing multimodal medical benchmarks, our proposed **M3CoTBench*
 - [Benchmark Statistics](#benchmark-statistics)  
 - [Installation](#installation)  
   - [Install requirements](#1-install-requirements)  
-  - [Download M3CoTBench Database](#2-downloads-the-ivebench-database)  
+  - [Download M3CoTBench Database](#2-downloads-the-m3cotbench-database)  
 - [Usage](#usage)  
 - [Experiments](#experiments)  
   - [Performance Comparison](#performance-score-of-different-methods)  
@@ -107,12 +107,13 @@ Compared with existing multimodal medical benchmarks, our proposed **M3CoTBench*
 # :hammer:Installation
 
 ### 1. Install requirements
+<a name="1-install-requirements"></a>
 
 ```
 ```
 
 ### 2. Downloads the M3CoTBench Database
-
+<a name="2-downloads-the-m3cotbench-database"></a>
 This section provides access to the [M3CoTBench Database](https://huggingface.co/datasets/APRIL-AIGC/M3CoTBench), which contains the complete `.png` image data of M3CoTBench and a `.xlsx` file (the file provides the question, answer and annotated CoT steps in the [M3CoTBench Database](https://huggingface.co/datasets/APRIL-AIGC/M3CoTBench)).
 🥰You can download [IVEBench DB](https://huggingface.co/datasets/Coraxor/IVEBench) to your local path using the following command:
 
@@ -124,6 +125,7 @@ huggingface-cli download --repo-type dataset --resume-download APRIL-AIGC/M3CoTB
 
 # :muscle:Usage
 
+<a name="citation"></a>
 
 # :black_nib:Citation
 
