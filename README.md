@@ -86,18 +86,21 @@ Compared with existing multimodal medical benchmarks, our proposed **M3CoTBench*
 
 # :movie_camera: Data Pipeline
 
-<img src="assets/pipeline.png" width.="1000px">
+<img src="assets/curation.png" width.="1000px">
 
-**Data acquisition and annotation pipeline of M3CoTBench.
+**Data acquisition and annotation pipeline of M3CoTBench.** **a)** Carefully curated medical images from various public sources. **b)** Multi-type and multi-difficulty QA generation via LLMs and expert calibration. **c)** Structured annotation of key reasoning steps aligned with clinical diagnostic workflows.
+
 
 
 <a name="benchmark-overview"></a>
 
 # :sunflower: Benchmark Overview
 
+<img src="assets/overview.png" width.="1000px">
+
+**Overview of M3CoTBench.** **Top:** The benchmark covers 24 imaging modalities/examination types, 4 question types, and 13 clinical reasoning tasks. **Middle:** CoT annotation examples and 4 evaluation dimensions. **Bottom:** The distribution of image-QA pairs across **a)** modalities, **b)** question types, and **c)** tasks.
 
 
-Statistical distributions of IVEBench DB
 
 <a name="installation"></a>
 
