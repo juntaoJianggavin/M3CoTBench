@@ -70,8 +70,8 @@ Compared with existing multimodal medical benchmarks, our proposed **M3CoTBench*
 
 - [Introduction](#introduction)  
 - [Highlight](#highlight)  
-- [Data Pipeline](#movie_camera-data-pipeline)  
-- [Benchmark Statistics](#benchmark-statistics)  
+- [Data Pipeline](#pipeline)  
+- [Benchmark Overview](#benchmark-overview)  
 - [Installation](#installation)  
   - [Install requirements](#1-install-requirements)  
   - [Download M3CoTBench Database](#2-downloads-the-m3cotbench-database)  
