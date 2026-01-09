@@ -428,7 +428,7 @@ python final_score/recall.py --cache_dir cache/recall --save_path final_results
 </table>
 <a name="acknowledgments"></a>
 
-## 🙏 Acknowledgments
+# 🙏 Acknowledgments
 
 We would like to acknowledge that some parts of the code were inspired by and referenced from [MME-CoT](https://mmecot.github.io/).
 
