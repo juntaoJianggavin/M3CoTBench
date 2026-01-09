@@ -108,6 +108,8 @@ Compared with existing multimodal medical benchmarks, our proposed **M3CoTBench*
 <a name="1-install-requirements"></a>
 
 ```
+git clone https://github.com/juntaoJianggavin/M3CoTBench.git
+cd M3CoTBench
 ```
 
 ### 2. Downloads the M3CoTBench Database
@@ -119,9 +121,81 @@ This section provides access to the [M3CoTBench Database](https://huggingface.co
 huggingface-cli download --repo-type dataset --resume-download APRIL-AIGC/M3CoTBench --local-dir $YOUR_LOCAL_PATH
 ```
 
+Then put the M3CoTBench.xlsx and images/ into the M3CoTBench/inference/datasets/
+
+
 <a name="usage"></a>
 
 # :muscle:Usage
+### 3. Inference
+#### Specialized Medical Models
+Note: Model weights should be placed in M3CoTBench/inference/pretrain. Each medical model requires its own specific Conda environment.
+For HealthGPT:
+```
+conda activate M3CoTBench_healthgpt
+
+bash  M3CoTBench/inference/HealthGPT/llava/demo/run_batch_eval.sh
+```
+For HuatuoGPT-Vision:
+```
+conda activate M3CoTBench_huatuo
+cd M3CoTBench/inference/pretrain/HuatuoGPT-Vision
+
+python M3CoTBench/inference/pretrain/HuatuoGPT-Vision/eval_new.py
+```
+For
+```
+conda activate M3CoTBench_llava
+cd M3CoTBench/inference/pretrain/LLaVA-Med
+
+# Direct Inference
+python M3CoTBench/inference/pretrain/LLaVA-Med/llava/eval/model_vqa.py --mode direct
+
+# Chain-of-Thought (CoT) Inference
+python M3CoTBench/inference/pretrain/LLaVA-Med/llava/eval/model_vqa.py --mode cot
+```
+
+Note: Lingshu and MedGemma are integrated into the General Framework below.
+
+#### General Framework
+Environment: M3CoTBench Working Directory: All scripts must be run from M3CoTBench/inference/.
+
+Master Scheduler: run_all_models.sh
+
+Coordinates all models.
+
+Local GPU Models: Run in background (parallel), occupying distinct GPUs.
+
+API Models: Uses xargs (max 3 concurrent jobs). 
+
+(1) API Inference
+```
+# Start "GPT-5" on port xxxxx with 4 internal processes
+bash run_api_model.sh "GPT-5" xxxxx 4
+
+# Start "Claude-Sonnet-4.5" on port xxxxx (default 4 processes)
+bash run_api_model.sh "Claude-Sonnet-4.5" xxxxx
+
+(2) Local Inference
+```
+bash M3CoTBench/inference/scripts/run_local_gpu_model.sh LLaVA-CoT 1,2,3,4,5,6 all xxxxx
+```
+
+To rerun failed inference data and update results:
+cd M3CoTBench/inference/
+
+# 1. Rerun failed files and merge into the original JSON
+python reprocess_failed.py \
+    --input-file final_output/Lingshu-32B/Lingshu-32B_direct.json \
+    --model "Lingshu-32B" \
+    --data-path "dataset/M3CoTBench.xlsx" \
+    --image-dir "dataset/images" \
+    --update-in-place
+
+# 2. Recalculate timing summary
+python recalculate_summary.py \
+    --results-file M3CoTBench/inference/final_output/Lingshu-32B/Lingshu-32B_direct.json \
+    --summary-file M3CoTBench/inference/final_output/Lingshu-32B/Lingshu-32B_summary.json
 
 <a name="citation"></a>
 
