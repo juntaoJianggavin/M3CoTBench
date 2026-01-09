@@ -193,6 +193,62 @@ python recalculate_summary.py \
     --summary-file final_output/Lingshu-32B/Lingshu-32B_summary.json
 ```
 
+### 4. Evaluation
+
+#### Correctness
+Step 1: Merge Chain-of-Thought Fields Merge the CoT steps of the correct answers and convert the format to XLSX.
+```
+cd M3CoTBench/evaluation/
+python combine_fields.py
+```
+Step 2: Format Inference Results Batch format the inference JSON files into the evaluation output format (XLSX). This file will contain both the CoT of the correct answer and the predicted answer from the inference.
+```
+python tools/update_lmmseval_json.py
+```
+
+Step 3. Run Evaluation Scripts
+You can run metrics individually. For example, to evaluate recall:
+```
+bash scripts/recall.sh
+bash scripts/precision.sh
+Note: Simply update the data path for YOUR_MODEL_NAME inside recall.sh (or other script files).
+```
+Alternatively, you can run all metrics for all models in a specific directory using the following command:
+
+```
+bash batch_scripts/run_all.py --result_dir results/
+```
+
+After the GPT evaluation, you should see a cache/ directory structured as follows:
+```
+📂 cache
+ ┣━━ 📂 recall
+ ┃    ┗━━ 📂 YOUR_MODEL_NAME
+ ┃         ┣━━ 📄 1.json
+ ┃         ┣━━ 📄 2.json
+ ┃         ┗━━ 📄 ...
+ ┗━━  📂 precision
+    ┗━━ 📂 YOUR_MODEL_NAME
+```
+
+Step 4. Calculate Metrics
+We cache the evaluation results for all questions in the cache directory. Here, we read results from the cache to calculate the final metrics.
+
+For example, to calculate Quality:
+
+```
+python final_score/quality.py --cache_dir cache --save_path final_results
+```
+
+The script will automatically calculate Recall and Precision, and then compute the F1 Score or Average Score.
+
+Alternatively, you can calculate each metric individually. For example, to calculate Recall:
+
+```
+python final_score/recall.py --cache_dir cache/recall --save_path final_results
+```
+
+
 <a name="experiments"></a>
 
 # :bar_chart:Experiments
