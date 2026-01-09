@@ -76,7 +76,8 @@ Compared with existing multimodal medical benchmarks, our proposed **M3CoTBench*
   - [Install requirements](#1-install-requirements)  
   - [Download M3CoTBench Database](#2-downloads-the-m3cotbench-database)  
 - [Usage](#usage)  
-- [Experiments](#experiments)  
+- [Experiments](#experiments)
+- [Acknowlegments](#acknowledgments)  
 - [Citation](#citation)  
 - [Contact](#contact)  
 
@@ -425,6 +426,12 @@ python final_score/recall.py --cache_dir cache/recall --save_path final_results
         </tr>
     </tbody>
 </table>
+<a name="acknowledgments"></a>
+
+## 🙏 Acknowledgments
+
+We would like to acknowledge that some parts of the code were inspired by and referenced from [MME-CoT](https://mmecot.github.io/).
+
 
 <a name="citation"></a>
 
