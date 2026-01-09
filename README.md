@@ -82,7 +82,7 @@ Compared with existing multimodal medical benchmarks, our proposed **M3CoTBench*
 
 <a name="pipeline"></a>
 
-# :movie_camera: Data Pipeline
+# :microscope: Data Pipeline
 
 <img src="assets/curation.png" width.="1000px">
 
