@@ -116,6 +116,7 @@ cd M3CoTBench
 ### 2. Downloads the M3CoTBench Database
 <a name="2-downloads-the-m3cotbench-database"></a>
 This section provides access to the [M3CoTBench Database](https://huggingface.co/datasets/APRIL-AIGC/M3CoTBench), which contains the complete `.png` image data of M3CoTBench and a `.xlsx` file (the file provides the question, answer and annotated CoT steps in the [M3CoTBench Database](https://huggingface.co/datasets/APRIL-AIGC/M3CoTBench)).
+
 🥰You can download [M3CoTBench Database](https://huggingface.co/datasets/APRIL-AIGC/M3CoTBench) to your local path using the following command:
 
 ```
@@ -131,10 +132,10 @@ Then put the M3CoTBench.xlsx and images/ into the M3CoTBench/inference/datasets/
 ### 3. Inference
 #### Specialized Medical Models
 Note: Model weights should be placed in M3CoTBench/inference/pretrain. Each medical model requires its own specific Conda environment.
+
 For HealthGPT:
 ```
 conda activate M3CoTBench_healthgpt
-
 bash  M3CoTBench/inference/HealthGPT/llava/demo/run_batch_eval.sh
 ```
 For HuatuoGPT-Vision:
@@ -148,10 +149,8 @@ For LLaVA-Med:
 ```
 conda activate M3CoTBench_llava
 cd M3CoTBench/inference/pretrain/LLaVA-Med
-
 # Direct Inference
 python llava/eval/model_vqa.py --mode direct
-
 # Chain-of-Thought (CoT) Inference
 python llava/eval/model_vqa.py --mode cot
 ```
@@ -179,7 +178,6 @@ bash scripts/run_local_gpu_model.sh LLaVA-CoT 1,2,3,4,5,6 all xxxxx
 To rerun failed inference data and update results:
 ```
 cd M3CoTBench/inference/
-
 # 1. Rerun failed files and merge into the original JSON
 python reprocess_failed.py \
     --input-file final_output/Lingshu-32B/Lingshu-32B_direct.json \
