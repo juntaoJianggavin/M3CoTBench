@@ -141,7 +141,7 @@ For HuatuoGPT-Vision:
 conda activate M3CoTBench_huatuo
 cd M3CoTBench/inference/pretrain/HuatuoGPT-Vision
 
-python M3CoTBench/inference/pretrain/HuatuoGPT-Vision/eval_new.py
+python eval_new.py
 ```
 For LLaVA-Med:
 ```
@@ -149,16 +149,18 @@ conda activate M3CoTBench_llava
 cd M3CoTBench/inference/pretrain/LLaVA-Med
 
 # Direct Inference
-python M3CoTBench/inference/pretrain/LLaVA-Med/llava/eval/model_vqa.py --mode direct
+python llava/eval/model_vqa.py --mode direct
 
 # Chain-of-Thought (CoT) Inference
-python M3CoTBench/inference/pretrain/LLaVA-Med/llava/eval/model_vqa.py --mode cot
+python llava/eval/model_vqa.py --mode cot
 ```
 
 Note: Lingshu and MedGemma are integrated into the General Framework below.
 
 #### General Framework
-Environment: M3CoTBench Working Directory: All scripts must be run from M3CoTBench/inference/.
+Environment: M3CoTBench 
+
+Working Directory: All scripts must be run from M3CoTBench/inference/.
 
 (1) API Inference
 ```
@@ -170,7 +172,7 @@ bash run_api_model.sh "Claude-Sonnet-4.5" xxxxx
 ```
 (2) Local Inference
 ```
-bash M3CoTBench/inference/scripts/run_local_gpu_model.sh LLaVA-CoT 1,2,3,4,5,6 all xxxxx
+bash scripts/run_local_gpu_model.sh LLaVA-CoT 1,2,3,4,5,6 all xxxxx
 ```
 
 To rerun failed inference data and update results:
@@ -187,8 +189,8 @@ python reprocess_failed.py \
 
 # 2. Recalculate timing summary
 python recalculate_summary.py \
-    --results-file M3CoTBench/inference/final_output/Lingshu-32B/Lingshu-32B_direct.json \
-    --summary-file M3CoTBench/inference/final_output/Lingshu-32B/Lingshu-32B_summary.json
+    --results-file final_output/Lingshu-32B/Lingshu-32B_direct.json \
+    --summary-file final_output/Lingshu-32B/Lingshu-32B_summary.json
 ```
 
 <a name="experiments"></a>
