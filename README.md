@@ -143,7 +143,7 @@ cd M3CoTBench/inference/pretrain/HuatuoGPT-Vision
 
 python M3CoTBench/inference/pretrain/HuatuoGPT-Vision/eval_new.py
 ```
-For
+For LLaVA-Med:
 ```
 conda activate M3CoTBench_llava
 cd M3CoTBench/inference/pretrain/LLaVA-Med
@@ -160,14 +160,6 @@ Note: Lingshu and MedGemma are integrated into the General Framework below.
 #### General Framework
 Environment: M3CoTBench Working Directory: All scripts must be run from M3CoTBench/inference/.
 
-Master Scheduler: run_all_models.sh
-
-Coordinates all models.
-
-Local GPU Models: Run in background (parallel), occupying distinct GPUs.
-
-API Models: Uses xargs (max 3 concurrent jobs). 
-
 (1) API Inference
 ```
 # Start "GPT-5" on port xxxxx with 4 internal processes
@@ -175,13 +167,14 @@ bash run_api_model.sh "GPT-5" xxxxx 4
 
 # Start "Claude-Sonnet-4.5" on port xxxxx (default 4 processes)
 bash run_api_model.sh "Claude-Sonnet-4.5" xxxxx
-
+```
 (2) Local Inference
 ```
 bash M3CoTBench/inference/scripts/run_local_gpu_model.sh LLaVA-CoT 1,2,3,4,5,6 all xxxxx
 ```
 
 To rerun failed inference data and update results:
+```
 cd M3CoTBench/inference/
 
 # 1. Rerun failed files and merge into the original JSON
@@ -196,8 +189,7 @@ python reprocess_failed.py \
 python recalculate_summary.py \
     --results-file M3CoTBench/inference/final_output/Lingshu-32B/Lingshu-32B_direct.json \
     --summary-file M3CoTBench/inference/final_output/Lingshu-32B/Lingshu-32B_summary.json
-
-<a name="citation"></a>
+```
 
 <a name="experiments"></a>
 
@@ -375,6 +367,8 @@ python recalculate_summary.py \
         </tr>
     </tbody>
 </table>
+
+<a name="citation"></a>
 
 # :black_nib:Citation
 
