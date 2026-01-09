@@ -248,6 +248,50 @@ python final_score/recall.py --cache_dir cache/recall --save_path final_results
 ```
 
 
+### Consistency
+Step 1: Configure API Settings
+
+Edit `reasoning_analyzer.py` and update the API configuration:
+
+```python
+# API Configuration
+API_BASE_URL = "YOUR_API_BASE_URL"  # Your API base URL
+API_KEY = "YOUR_API_KEY_HERE"  # Replace with your actual API key
+MODEL_NAME = "gemini-2.5-pro"  # Model name for your API (e.g., "gpt-4o", "gemini-2.5-pro")
+```
+
+**Note:** `MODEL_NAME` is the model name used by your API service, not the model being analyzed.
+
+### Step 2: Run Batch Processing with Results
+
+Process the example data to see the complete workflow:
+
+```bash
+# Process example data
+python batch_processor.py \
+    --result-dir example_data/input_data \
+    --output-dir example_data/processed_output \
+    --workers 2
+```
+
+**Output locations:**
+- CSV files: `example_data/processed_output/Demo-Model_cot.csv`
+- Contains extracted reasoning paths for all 5 example records
+
+Step 3: Run LCS Analysis
+
+Analyze reasoning path consistency:
+
+```bash
+# The lcs_analyzer.py is already configured for example data
+python lcs_analyzer.py
+```
+
+**Output locations:**
+- Analysis report: `example_data/analysis_results/lcs_analysis_summary.csv`
+- Visualization charts: `example_data/analysis_results/lcs_analysis_plots/`
+
+
 <a name="experiments"></a>
 
 # :bar_chart:Experiments
