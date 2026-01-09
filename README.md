@@ -129,8 +129,178 @@ huggingface-cli download --repo-type dataset --resume-download APRIL-AIGC/M3CoTB
 
 # :bar_chart:Experiments
 
-### **Performance score of different methods**
+### **Performance score of different methods.** 
+<p><strong>Metrics:</strong> ↑ Higher is Better, ↓ Lower is Better. <strong>Bold</strong>: Best result.</p>
 
+<table>
+    <thead>
+        <tr>
+            <th rowspan="2" align="center"><strong>#</strong></th>
+            <th rowspan="2" align="left"><strong>Model</strong></th>
+            <th rowspan="2" align="center"><strong>Category</strong></th>
+            <th colspan="3" align="center"><strong>Correctness (↑)</strong></th>
+            <th colspan="3" align="center"><strong>Impact (↑)</strong></th>
+            <th colspan="2" align="center"><strong>Efficiency</strong></th>
+            <th rowspan="2" align="center"><strong>Consistency<br>C<sub>path</sub> (↑)</strong></th>
+        </tr>
+        <tr>
+            <th align="center"><strong>F1</strong></th>
+            <th align="center"><strong>P</strong></th>
+            <th align="center"><strong>R</strong></th>
+            <th align="center"><strong>Acc<sub>dir</sub></strong></th>
+            <th align="center"><strong>Acc<sub>step</sub></strong></th>
+            <th align="center"><strong>I</strong></th>
+            <th align="center"><strong>E (↑)</strong></th>
+            <th align="center"><strong>L (↓)</strong></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td align="center">1</td>
+            <td align="left">LLava-CoT</td>
+            <td align="center">Open-source</td>
+            <td align="center">49.80</td><td align="center">54.08</td><td align="center">46.15</td>
+            <td align="center">40.08</td><td align="center">36.75</td><td align="center">-3.33</td>
+            <td align="center">0.06</td><td align="center">1.56</td><td align="center">77.02</td>
+        </tr>
+        <tr>
+            <td align="center">2</td>
+            <td align="left">InternVL3.5-8B</td>
+            <td align="center">Open-source</td>
+            <td align="center">56.48</td><td align="center">60.61</td><td align="center">52.88</td>
+            <td align="center">56.81</td><td align="center">53.61</td><td align="center">-3.20</td>
+            <td align="center">0.10</td><td align="center">18.27</td><td align="center">71.65</td>
+        </tr>
+        <tr>
+            <td align="center">3</td>
+            <td align="left">InternVL3.5-30B</td>
+            <td align="center">Open-source</td>
+            <td align="center">59.42</td><td align="center">62.15</td><td align="center">56.92</td>
+            <td align="center"><b>63.81</b></td><td align="center">57.60</td><td align="center">-6.21</td>
+            <td align="center">0.03</td><td align="center">16.68</td><td align="center">76.30</td>
+        </tr>
+        <tr>
+            <td align="center">4</td>
+            <td align="left">Qwen3-VL-Instruct-8B</td>
+            <td align="center">Open-source</td>
+            <td align="center">55.17</td><td align="center">52.74</td><td align="center">57.84</td>
+            <td align="center">51.30</td><td align="center">46.62</td><td align="center">-4.68</td>
+            <td align="center">0.04</td><td align="center">93.94</td><td align="center">82.65</td>
+        </tr>
+        <tr>
+            <td align="center">5</td>
+            <td align="left">Qwen3-VL-Instruct-30B</td>
+            <td align="center">Open-source</td>
+            <td align="center">59.15</td><td align="center">56.13</td><td align="center">62.51</td>
+            <td align="center">54.63</td><td align="center">51.39</td><td align="center">-3.24</td>
+            <td align="center">0.03</td><td align="center">35.63</td><td align="center"><u>83.01</u></td>
+        </tr>
+        <tr>
+            <td align="center">6</td>
+            <td align="left">Qwen3-VL-Thinking-8B</td>
+            <td align="center">Open-source</td>
+            <td align="center">59.87</td><td align="center">59.84</td><td align="center">59.91</td>
+            <td align="center">48.33</td><td align="center">52.83</td><td align="center"><b>+4.50</b></td>
+            <td align="center">0.02</td><td align="center">2.79</td><td align="center">76.91</td>
+        </tr>
+        <tr>
+            <td align="center">7</td>
+            <td align="left">Qwen3-VL-Thinking-30B</td>
+            <td align="center">Open-source</td>
+            <td align="center"><u>62.15</u></td><td align="center">63.34</td><td align="center">61.01</td>
+            <td align="center">51.90</td><td align="center">55.47</td><td align="center"><u>+3.57</u></td>
+            <td align="center">0.02</td><td align="center"><u>1.15</u></td><td align="center">76.02</td>
+        </tr>
+        <tr>
+            <td align="center">8</td>
+            <td align="left">GPT-4.1</td>
+            <td align="center">Closed-source</td>
+            <td align="center">60.76</td><td align="center">58.32</td><td align="center"><u>63.42</u></td>
+            <td align="center">56.77</td><td align="center">57.97</td><td align="center">+1.22</td>
+            <td align="center">0.17</td><td align="center">5.08</td><td align="center">81.31</td>
+        </tr>
+        <tr>
+            <td align="center">9</td>
+            <td align="left">GPT-5</td>
+            <td align="center">Closed-source</td>
+            <td align="center">55.13</td><td align="center"><u>64.15</u></td><td align="center">48.34</td>
+            <td align="center">58.76</td><td align="center">58.29</td><td align="center">-0.47</td>
+            <td align="center">0.06</td><td align="center"><b>1.10</b></td><td align="center">65.39</td>
+        </tr>
+        <tr>
+            <td align="center">10</td>
+            <td align="left">Gemini 2.5 Pro</td>
+            <td align="center">Closed-source</td>
+            <td align="center"><b>66.07</b></td><td align="center">62.48</td><td align="center"><b>70.10</b></td>
+            <td align="center"><u>60.24</u></td><td align="center"><b>60.06</b></td><td align="center">-0.18</td>
+            <td align="center">0.10</td><td align="center">1.52</td><td align="center">82.00</td>
+        </tr>
+        <tr>
+            <td align="center">11</td>
+            <td align="left">Claude-Sonnet-4.5</td>
+            <td align="center">Closed-source</td>
+            <td align="center">56.50</td><td align="center">53.62</td><td align="center">59.71</td>
+            <td align="center">51.25</td><td align="center">51.07</td><td align="center">-0.18</td>
+            <td align="center">0.15</td><td align="center">2.69</td><td align="center"><b>85.22</b></td>
+        </tr>
+        <tr>
+            <td align="center">12</td>
+            <td align="left">LLaVA-Med (7B)</td>
+            <td align="center">Medical</td>
+            <td align="center">30.51</td><td align="center">36.33</td><td align="center">26.30</td>
+            <td align="center">29.38</td><td align="center">29.29</td><td align="center">-0.09</td>
+            <td align="center"><b>0.35</b></td><td align="center">3.22</td><td align="center">72.68</td>
+        </tr>
+        <tr>
+            <td align="center">13</td>
+            <td align="left">HuatuoGPT-Vision (7B)</td>
+            <td align="center">Medical</td>
+            <td align="center">49.45</td><td align="center">51.17</td><td align="center">47.85</td>
+            <td align="center">41.89</td><td align="center">34.94</td><td align="center">-6.95</td>
+            <td align="center">0.21</td><td align="center">5.92</td><td align="center">73.19</td>
+        </tr>
+        <tr>
+            <td align="center">14</td>
+            <td align="left">HealthGPT (3.8B)</td>
+            <td align="center">Medical</td>
+            <td align="center">32.56</td><td align="center">47.27</td><td align="center">24.83</td>
+            <td align="center">44.11</td><td align="center">41.98</td><td align="center">-2.13</td>
+            <td align="center">0.06</td><td align="center">15.36</td><td align="center">67.72</td>
+        </tr>
+        <tr>
+            <td align="center">15</td>
+            <td align="left">Lingshu-7B</td>
+            <td align="center">Medical</td>
+            <td align="center">57.57</td><td align="center">63.96</td><td align="center">52.34</td>
+            <td align="center">50.00</td><td align="center">42.08</td><td align="center">-7.92</td>
+            <td align="center"><u>0.30</u></td><td align="center">8.37</td><td align="center">74.83</td>
+        </tr>
+        <tr>
+            <td align="center">16</td>
+            <td align="left">Lingshu-32B</td>
+            <td align="center">Medical</td>
+            <td align="center">59.16</td><td align="center"><b>65.68</b></td><td align="center">53.82</td>
+            <td align="center">51.77</td><td align="center">44.95</td><td align="center">-6.82</td>
+            <td align="center">0.21</td><td align="center">10.87</td><td align="center">71.47</td>
+        </tr>
+        <tr>
+            <td align="center">17</td>
+            <td align="left">MedGemma-4B</td>
+            <td align="center">Medical</td>
+            <td align="center">48.13</td><td align="center">50.29</td><td align="center">46.14</td>
+            <td align="center">43.33</td><td align="center">41.29</td><td align="center">-2.04</td>
+            <td align="center">0.05</td><td align="center">20.61</td><td align="center">74.03</td>
+        </tr>
+        <tr>
+            <td align="center">18</td>
+            <td align="left">MedGemma-27B</td>
+            <td align="center">Medical</td>
+            <td align="center">50.98</td><td align="center">48.33</td><td align="center">53.81</td>
+            <td align="center">46.06</td><td align="center">45.88</td><td align="center">-0.18</td>
+            <td align="center">0.03</td><td align="center">23.71</td><td align="center">82.55</td>
+        </tr>
+    </tbody>
+</table>
 
 # :black_nib:Citation
 
