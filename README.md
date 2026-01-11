@@ -110,7 +110,6 @@ Compared with existing multimodal medical benchmarks, our proposed **M3CoTBench*
 
 ```
 git clone https://github.com/juntaoJianggavin/M3CoTBench.git
-cd M3CoTBench
 ```
 
 ### 2. Downloads the M3CoTBench Database
@@ -158,17 +157,22 @@ python llava/eval/model_vqa.py --mode cot
 Note: Lingshu and MedGemma are integrated into the General Framework below.
 
 #### General Framework
-Environment: M3CoTBench 
 
+Environment: M3CoTBench
+```
+cd M3CoTBench_env/inference/
+conda env create -f environment.yaml
+conda activate M3CoTBench_env
+```
 Working Directory: All scripts must be run from M3CoTBench/inference/.
 
 (1) API Inference
 ```
 # Start "GPT-5" on port xxxxx with 4 internal processes
-bash run_api_model.sh "GPT-5" xxxxx 4
+bash scripts/run_api_model.sh "GPT-5" xxxxx 4
 
 # Start "Claude-Sonnet-4.5" on port xxxxx (default 4 processes)
-bash run_api_model.sh "Claude-Sonnet-4.5" xxxxx
+bash scripts/run_api_model.sh "Claude-Sonnet-4.5" xxxxx
 ```
 (2) Local Inference
 ```
@@ -230,13 +234,13 @@ After the GPT evaluation, you should see a cache/ directory structured as follow
     ┗━━ 📂 YOUR_MODEL_NAME
 ```
 
-Step 4. Calculate Metrics
+Step 4. Calculate Metrics for P, R and F1
 We cache the evaluation results for all questions in the cache directory. Here, we read results from the cache to calculate the final metrics.
 
-For example, to calculate Quality:
+For example, to calculate correctness.py:
 
 ```
-python final_score/quality.py --cache_dir cache --save_path final_results
+python final_score/correctness.py --cache_dir cache --save_path final_results
 ```
 
 The script will automatically calculate Recall and Precision, and then compute the F1 Score or Average Score.
