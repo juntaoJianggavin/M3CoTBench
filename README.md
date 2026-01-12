@@ -218,12 +218,6 @@ bash scripts/recall.sh
 bash scripts/precision.sh
 Note: Simply update the data path for YOUR_MODEL_NAME inside recall.sh (or other script files).
 ```
-Alternatively, you can run all metrics for all models in a specific directory using the following command:
-
-```
-bash batch_scripts/run_all.py --result_dir results/
-```
-
 After the GPT evaluation, you should see a cache/ directory structured as follows:
 ```
 📂 cache
