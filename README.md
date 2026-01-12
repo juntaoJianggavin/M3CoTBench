@@ -166,7 +166,6 @@ Environment: M3CoTBench
 conda env create -f environment.yaml
 conda activate M3CoTBench_env
 ```
-Working Directory: All scripts must be run from M3CoTBench/inference/.
 
 (1) API Inference
 ```
