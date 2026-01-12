@@ -128,19 +128,21 @@ Then put the M3CoTBench.xlsx and images/ into the M3CoTBench/inference/datasets/
 
 # :muscle:Usage
 ### 3. Inference
+Enter the directory:
+```
+cd M3CoTBench/inference/
+```
 #### Specialized Medical Models
 Note: Model weights should be placed in M3CoTBench/inference/pretrain. Each medical model requires its own specific Conda environment.
 
 For HealthGPT:
 ```
 conda activate M3CoTBench_healthgpt
-cd M3CoTBench/inference/
 bash  models/medical_models/HealthGPT/llava/demo/run_batch_eval.sh
 ```
 For HuatuoGPT-Vision:
 ```
 conda activate M3CoTBench_huatuo
-cd M3CoTBench/inference/
 # Direct Inference
 python models/medical_models/HuatuoGPT-Vision/eval.py --run_direct
 # CoT Inference
@@ -149,7 +151,6 @@ python models/medical_models/HuatuoGPT-Vision/eval.py --run_cot
 For LLaVA-Med:
 ```
 conda activate M3CoTBench_llava
-cd M3CoTBench/inference/
 # Direct Inference
 python models/medical_models/LLaVA-Med/llava/eval/model_vqa.py --mode direct
 # CoT Inference
@@ -162,7 +163,6 @@ Note: Lingshu and MedGemma are integrated into the General Framework below.
 
 Environment: M3CoTBench
 ```
-cd M3CoTBench_env/inference/
 conda env create -f environment.yaml
 conda activate M3CoTBench_env
 ```
