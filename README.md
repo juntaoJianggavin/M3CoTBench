@@ -36,7 +36,6 @@
 </p>
 
 <p align="center">
-    <a href=''>
       <img src='https://img.shields.io/badge/arXiv-PDF-red?style=flat&logo=arXiv&logoColor=red' alt='arXiv PDF'>
          </a>
 <a href="https://huggingface.co/datasets/APRIL-AIGC/M3CoTBench"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Dataset&color=yellow"></a>
