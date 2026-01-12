@@ -137,11 +137,13 @@ Note: Model weights should be placed in M3CoTBench/inference/pretrain. Each medi
 
 For HealthGPT:
 ```
+conda env create -f ../environment/healthgpt_environment.yaml
 conda activate M3CoTBench_healthgpt
 bash  models/medical_models/HealthGPT/llava/demo/run_batch_eval.sh
 ```
 For HuatuoGPT-Vision:
 ```
+conda env create -f ../environment/huatuo_environment.yaml
 conda activate M3CoTBench_huatuo
 # Direct Inference
 python models/medical_models/HuatuoGPT-Vision/eval.py --run_direct
@@ -150,7 +152,8 @@ python models/medical_models/HuatuoGPT-Vision/eval.py --run_cot
 ```
 For LLaVA-Med:
 ```
-conda activate M3CoTBench_llava
+conda env create -f ../environment/llavamed_environment.yaml
+conda activate M3CoTBench_llavamed
 # Direct Inference
 python models/medical_models/LLaVA-Med/llava/eval/model_vqa.py --mode direct
 # CoT Inference
@@ -163,7 +166,7 @@ Note: Lingshu and MedGemma are integrated into the General Framework below.
 
 Environment: M3CoTBench
 ```
-conda env create -f environment.yaml
+conda env create -f ../environment/environment.yaml
 conda activate M3CoTBench_env
 ```
 
