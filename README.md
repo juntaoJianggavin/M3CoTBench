@@ -134,23 +134,26 @@ Note: Model weights should be placed in M3CoTBench/inference/pretrain. Each medi
 For HealthGPT:
 ```
 conda activate M3CoTBench_healthgpt
-bash  M3CoTBench/inference/HealthGPT/llava/demo/run_batch_eval.sh
+cd M3CoTBench/inference/
+bash  models/medical_models/HealthGPT/llava/demo/run_batch_eval.sh
 ```
 For HuatuoGPT-Vision:
 ```
 conda activate M3CoTBench_huatuo
-cd M3CoTBench/inference/pretrain/HuatuoGPT-Vision
-
-python eval_new.py
+cd M3CoTBench/inference/
+# Direct Inference
+python models/medical_models/HuatuoGPT-Vision/eval.py --run_direct
+# CoT Inference
+python models/medical_models/HuatuoGPT-Vision/eval.py --run_cot
 ```
 For LLaVA-Med:
 ```
 conda activate M3CoTBench_llava
-cd M3CoTBench/inference/pretrain/LLaVA-Med
+cd M3CoTBench/inference/
 # Direct Inference
-python llava/eval/model_vqa.py --mode direct
-# Chain-of-Thought (CoT) Inference
-python llava/eval/model_vqa.py --mode cot
+python models/medical_models/LLaVA-Med/llava/eval/model_vqa.py --mode direct
+# CoT Inference
+python models/medical_models/LLaVA-Med/llava/eval/model_vqa.py --mode cot
 ```
 
 Note: Lingshu and MedGemma are integrated into the General Framework below.
