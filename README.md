@@ -249,8 +249,28 @@ Alternatively, you can calculate each metric individually. For example, to calcu
 python final_score/recall.py --cache_dir cache/recall --save_path final_results
 ```
 
+Step 5. Cacualte Accuracies for the answers
+Evaluate the direct answer:
+```
+python scripts/accuracy.py \
+  --json_path "../inference/final_output/Qwen3-VL-30B-Thinking/Qwen3-VL-30B-Thinking_direct.json" \
+  --excel_path "../inference/M3CoTBench.xlsx" \
+  --output_path "Qwen3-VL-30B-Thinking_direct.json" \
+  --model "gpt-4o"
+```
+Evaluate the cot answer:
+```
+python scripts/accuracy.py \
+  --json_path "../inference/final_output/Qwen3-VL-30B-Thinking/Qwen3-VL-30B-Thinking_cot.json" \
+  --excel_path "../inference/M3CoTBench.xlsx" \
+  --output_path "Qwen3-VL-30B-Thinking_cot.json" \
+  --model "gpt-4o"
+```
+Then the impact score can be caculated.
 
+Step 6. Cacualte Consistencies for the Output Steps
 
+Under construction.
 
 <a name="experiments"></a>
 
