@@ -268,7 +268,7 @@ python scripts/accuracy.py \
 ```
 Then the impact score can be caculated.
 
-Step 6. Cacualte Consistencies for the Output Steps
+Step 6. Caculate Consistencies for the Output Steps
 
 Under construction.
 
