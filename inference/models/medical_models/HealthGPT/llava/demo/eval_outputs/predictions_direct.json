@@ -1,0 +1,4166 @@
+[
+  {
+    "index": "1",
+    "prediction": "C"
+  },
+  {
+    "index": "2",
+    "prediction": "Surgical intervention"
+  },
+  {
+    "index": "3",
+    "prediction": "No"
+  },
+  {
+    "index": "4",
+    "prediction": "C"
+  },
+  {
+    "index": "5",
+    "prediction": "D"
+  },
+  {
+    "index": "6",
+    "prediction": "Corneal ulcer"
+  },
+  {
+    "index": "7",
+    "prediction": "B"
+  },
+  {
+    "index": "8",
+    "prediction": "False"
+  },
+  {
+    "index": "9",
+    "prediction": "B"
+  },
+  {
+    "index": "10",
+    "prediction": "True"
+  },
+  {
+    "index": "11",
+    "prediction": "Fluorescein angiography"
+  },
+  {
+    "index": "12",
+    "prediction": "True"
+  },
+  {
+    "index": "13",
+    "prediction": "True"
+  },
+  {
+    "index": "14",
+    "prediction": "C"
+  },
+  {
+    "index": "15",
+    "prediction": "False"
+  },
+  {
+    "index": "16",
+    "prediction": "C"
+  },
+  {
+    "index": "17",
+    "prediction": "B"
+  },
+  {
+    "index": "18",
+    "prediction": "Yes"
+  },
+  {
+    "index": "19",
+    "prediction": "A, B, C, D, E"
+  },
+  {
+    "index": "20",
+    "prediction": "False"
+  },
+  {
+    "index": "21",
+    "prediction": "C, D, F"
+  },
+  {
+    "index": "22",
+    "prediction": "A, B, C, D, E"
+  },
+  {
+    "index": "23",
+    "prediction": "Yes"
+  },
+  {
+    "index": "24",
+    "prediction": "B, C, D, E"
+  },
+  {
+    "index": "25",
+    "prediction": "Infection"
+  },
+  {
+    "index": "26",
+    "prediction": "Maintain good eye hygiene, avoid contact with infected individuals, and seek prompt medical attention if symptoms develop."
+  },
+  {
+    "index": "27",
+    "prediction": "False"
+  },
+  {
+    "index": "28",
+    "prediction": "Surgical removal of the tumor, chemotherapy, and radiation therapy"
+  },
+  {
+    "index": "29",
+    "prediction": "Fluorescein angiography"
+  },
+  {
+    "index": "30",
+    "prediction": "Vascular occlusion"
+  },
+  {
+    "index": "31",
+    "prediction": "Fluorescein angiography"
+  },
+  {
+    "index": "32",
+    "prediction": "Laser photocoagulation"
+  },
+  {
+    "index": "33",
+    "prediction": "Yes"
+  },
+  {
+    "index": "34",
+    "prediction": "B, C, D"
+  },
+  {
+    "index": "35",
+    "prediction": "C"
+  },
+  {
+    "index": "36",
+    "prediction": "False"
+  },
+  {
+    "index": "37",
+    "prediction": "C"
+  },
+  {
+    "index": "38",
+    "prediction": "B"
+  },
+  {
+    "index": "39",
+    "prediction": "B. Myopic foveoschisis"
+  },
+  {
+    "index": "40",
+    "prediction": "E"
+  },
+  {
+    "index": "41",
+    "prediction": "Fluorescein angiography"
+  },
+  {
+    "index": "42",
+    "prediction": "A"
+  },
+  {
+    "index": "43",
+    "prediction": "True"
+  },
+  {
+    "index": "44",
+    "prediction": "D"
+  },
+  {
+    "index": "45",
+    "prediction": "Yes"
+  },
+  {
+    "index": "46",
+    "prediction": "B"
+  },
+  {
+    "index": "47",
+    "prediction": "True"
+  },
+  {
+    "index": "48",
+    "prediction": "False"
+  },
+  {
+    "index": "49",
+    "prediction": "A, B, C"
+  },
+  {
+    "index": "50",
+    "prediction": "False"
+  },
+  {
+    "index": "51",
+    "prediction": "True"
+  },
+  {
+    "index": "52",
+    "prediction": "C"
+  },
+  {
+    "index": "53",
+    "prediction": "True"
+  },
+  {
+    "index": "54",
+    "prediction": "Infection, bleeding, and hernia"
+  },
+  {
+    "index": "55",
+    "prediction": "True"
+  },
+  {
+    "index": "56",
+    "prediction": "Yes"
+  },
+  {
+    "index": "57",
+    "prediction": "A"
+  },
+  {
+    "index": "58",
+    "prediction": "C"
+  },
+  {
+    "index": "59",
+    "prediction": "Surgical removal"
+  },
+  {
+    "index": "60",
+    "prediction": "A, C, E"
+  },
+  {
+    "index": "61",
+    "prediction": "A"
+  },
+  {
+    "index": "62",
+    "prediction": "B) Proliferatived diabetic retinopathy"
+  },
+  {
+    "index": "63",
+    "prediction": "B) Proliferatived diabetic retinopathy"
+  },
+  {
+    "index": "64",
+    "prediction": "B) Proliferatived diabetic retinopathy"
+  },
+  {
+    "index": "65",
+    "prediction": "A"
+  },
+  {
+    "index": "66",
+    "prediction": "False"
+  },
+  {
+    "index": "67",
+    "prediction": "False"
+  },
+  {
+    "index": "68",
+    "prediction": "True"
+  },
+  {
+    "index": "69",
+    "prediction": "True"
+  },
+  {
+    "index": "70",
+    "prediction": "True"
+  },
+  {
+    "index": "71",
+    "prediction": "True"
+  },
+  {
+    "index": "72",
+    "prediction": "True"
+  },
+  {
+    "index": "73",
+    "prediction": "A"
+  },
+  {
+    "index": "74",
+    "prediction": "A) (0.1947, 0.4508)"
+  },
+  {
+    "index": "75",
+    "prediction": "A) (0.1947, 0.4508)"
+  },
+  {
+    "index": "76",
+    "prediction": "False"
+  },
+  {
+    "index": "77",
+    "prediction": "True"
+  },
+  {
+    "index": "78",
+    "prediction": "True"
+  },
+  {
+    "index": "79",
+    "prediction": "True"
+  },
+  {
+    "index": "80",
+    "prediction": "True"
+  },
+  {
+    "index": "81",
+    "prediction": "True"
+  },
+  {
+    "index": "82",
+    "prediction": "True"
+  },
+  {
+    "index": "83",
+    "prediction": "True"
+  },
+  {
+    "index": "84",
+    "prediction": "True"
+  },
+  {
+    "index": "85",
+    "prediction": "True"
+  },
+  {
+    "index": "86",
+    "prediction": "True"
+  },
+  {
+    "index": "87",
+    "prediction": "True"
+  },
+  {
+    "index": "88",
+    "prediction": "B"
+  },
+  {
+    "index": "89",
+    "prediction": "True"
+  },
+  {
+    "index": "90",
+    "prediction": "True"
+  },
+  {
+    "index": "91",
+    "prediction": "D"
+  },
+  {
+    "index": "92",
+    "prediction": "C"
+  },
+  {
+    "index": "93",
+    "prediction": "D"
+  },
+  {
+    "index": "94",
+    "prediction": "B"
+  },
+  {
+    "index": "95",
+    "prediction": "A"
+  },
+  {
+    "index": "96",
+    "prediction": "A, B, C, D, E"
+  },
+  {
+    "index": "97",
+    "prediction": "C, E"
+  },
+  {
+    "index": "98",
+    "prediction": "True"
+  },
+  {
+    "index": "99",
+    "prediction": "A, B, C, E, G"
+  },
+  {
+    "index": "100",
+    "prediction": "C, E"
+  },
+  {
+    "index": "101",
+    "prediction": "A, C, D, E, G"
+  },
+  {
+    "index": "102",
+    "prediction": "Breast Cancer"
+  },
+  {
+    "index": "103",
+    "prediction": "C"
+  },
+  {
+    "index": "104",
+    "prediction": "Pneumonia"
+  },
+  {
+    "index": "105",
+    "prediction": "G"
+  },
+  {
+    "index": "106",
+    "prediction": "Pneumonia"
+  },
+  {
+    "index": "107",
+    "prediction": "False"
+  },
+  {
+    "index": "108",
+    "prediction": "B"
+  },
+  {
+    "index": "109",
+    "prediction": "C"
+  },
+  {
+    "index": "110",
+    "prediction": "A, B, C, D, E, F, G"
+  },
+  {
+    "index": "111",
+    "prediction": "Lung Cancer"
+  },
+  {
+    "index": "112",
+    "prediction": "C"
+  },
+  {
+    "index": "113",
+    "prediction": "False"
+  },
+  {
+    "index": "114",
+    "prediction": "False"
+  },
+  {
+    "index": "115",
+    "prediction": "A, B, C, E, F"
+  },
+  {
+    "index": "116",
+    "prediction": "False"
+  },
+  {
+    "index": "117",
+    "prediction": "True"
+  },
+  {
+    "index": "118",
+    "prediction": "A"
+  },
+  {
+    "index": "119",
+    "prediction": "Pneumonia"
+  },
+  {
+    "index": "120",
+    "prediction": "Cardiomegaly"
+  },
+  {
+    "index": "121",
+    "prediction": "True"
+  },
+  {
+    "index": "122",
+    "prediction": "True"
+  },
+  {
+    "index": "123",
+    "prediction": "False"
+  },
+  {
+    "index": "124",
+    "prediction": "False"
+  },
+  {
+    "index": "125",
+    "prediction": "False"
+  },
+  {
+    "index": "126",
+    "prediction": "A, B, C, D, G"
+  },
+  {
+    "index": "127",
+    "prediction": "Pneumonia"
+  },
+  {
+    "index": "128",
+    "prediction": "False"
+  },
+  {
+    "index": "129",
+    "prediction": "A, B, C, E"
+  },
+  {
+    "index": "130",
+    "prediction": "B"
+  },
+  {
+    "index": "131",
+    "prediction": "True"
+  },
+  {
+    "index": "132",
+    "prediction": "A, B, D, E"
+  },
+  {
+    "index": "133",
+    "prediction": "A, B, D, E"
+  },
+  {
+    "index": "134",
+    "prediction": "Brain Edema"
+  },
+  {
+    "index": "135",
+    "prediction": "Brain Edema"
+  },
+  {
+    "index": "136",
+    "prediction": "Brain Edema"
+  },
+  {
+    "index": "137",
+    "prediction": "False"
+  },
+  {
+    "index": "138",
+    "prediction": "True"
+  },
+  {
+    "index": "139",
+    "prediction": "False"
+  },
+  {
+    "index": "140",
+    "prediction": "Brain Edema"
+  },
+  {
+    "index": "141",
+    "prediction": "Brain Edema"
+  },
+  {
+    "index": "142",
+    "prediction": "False"
+  },
+  {
+    "index": "143",
+    "prediction": "False"
+  },
+  {
+    "index": "144",
+    "prediction": "False"
+  },
+  {
+    "index": "145",
+    "prediction": "False"
+  },
+  {
+    "index": "146",
+    "prediction": "A, B, C, G"
+  },
+  {
+    "index": "147",
+    "prediction": "True"
+  },
+  {
+    "index": "148",
+    "prediction": "A, B, C, E, G"
+  },
+  {
+    "index": "149",
+    "prediction": "B"
+  },
+  {
+    "index": "150",
+    "prediction": "A, B, D, E, G"
+  },
+  {
+    "index": "151",
+    "prediction": "C"
+  },
+  {
+    "index": "152",
+    "prediction": "D"
+  },
+  {
+    "index": "153",
+    "prediction": "A, B, E, F"
+  },
+  {
+    "index": "154",
+    "prediction": "C"
+  },
+  {
+    "index": "155",
+    "prediction": "A"
+  },
+  {
+    "index": "156",
+    "prediction": "D"
+  },
+  {
+    "index": "157",
+    "prediction": "C"
+  },
+  {
+    "index": "158",
+    "prediction": "A, B, C, E, F, G"
+  },
+  {
+    "index": "159",
+    "prediction": "B"
+  },
+  {
+    "index": "160",
+    "prediction": "A, B, C"
+  },
+  {
+    "index": "161",
+    "prediction": "False"
+  },
+  {
+    "index": "162",
+    "prediction": "False"
+  },
+  {
+    "index": "163",
+    "prediction": "False"
+  },
+  {
+    "index": "164",
+    "prediction": "D"
+  },
+  {
+    "index": "165",
+    "prediction": "False"
+  },
+  {
+    "index": "166",
+    "prediction": "False"
+  },
+  {
+    "index": "167",
+    "prediction": "Pneumonia"
+  },
+  {
+    "index": "169",
+    "prediction": "True"
+  },
+  {
+    "index": "170",
+    "prediction": "E"
+  },
+  {
+    "index": "171",
+    "prediction": "E"
+  },
+  {
+    "index": "172",
+    "prediction": "Brain Edema"
+  },
+  {
+    "index": "173",
+    "prediction": "B"
+  },
+  {
+    "index": "174",
+    "prediction": "A, B, C"
+  },
+  {
+    "index": "175",
+    "prediction": "B, C, E, F, H"
+  },
+  {
+    "index": "176",
+    "prediction": "B"
+  },
+  {
+    "index": "177",
+    "prediction": "B"
+  },
+  {
+    "index": "178",
+    "prediction": "True"
+  },
+  {
+    "index": "179",
+    "prediction": "Brain Edema"
+  },
+  {
+    "index": "180",
+    "prediction": "A, B, C, E, H"
+  },
+  {
+    "index": "181",
+    "prediction": "A, B, C, E"
+  },
+  {
+    "index": "182",
+    "prediction": "False"
+  },
+  {
+    "index": "183",
+    "prediction": "False"
+  },
+  {
+    "index": "184",
+    "prediction": "False"
+  },
+  {
+    "index": "185",
+    "prediction": "Breathe"
+  },
+  {
+    "index": "186",
+    "prediction": "Brain"
+  },
+  {
+    "index": "187",
+    "prediction": "True"
+  },
+  {
+    "index": "188",
+    "prediction": "Brain"
+  },
+  {
+    "index": "189",
+    "prediction": "True"
+  },
+  {
+    "index": "190",
+    "prediction": "Breathe"
+  },
+  {
+    "index": "191",
+    "prediction": "A"
+  },
+  {
+    "index": "192",
+    "prediction": "false"
+  },
+  {
+    "index": "193",
+    "prediction": "A"
+  },
+  {
+    "index": "194",
+    "prediction": "C"
+  },
+  {
+    "index": "195",
+    "prediction": "C"
+  },
+  {
+    "index": "196",
+    "prediction": "A"
+  },
+  {
+    "index": "197",
+    "prediction": "C"
+  },
+  {
+    "index": "198",
+    "prediction": "True"
+  },
+  {
+    "index": "199",
+    "prediction": "C"
+  },
+  {
+    "index": "200",
+    "prediction": "C"
+  },
+  {
+    "index": "201",
+    "prediction": "A, B, D, E"
+  },
+  {
+    "index": "202",
+    "prediction": "B"
+  },
+  {
+    "index": "203",
+    "prediction": "A, B, D, E"
+  },
+  {
+    "index": "204",
+    "prediction": "B"
+  },
+  {
+    "index": "205",
+    "prediction": "B"
+  },
+  {
+    "index": "206",
+    "prediction": "A"
+  },
+  {
+    "index": "207",
+    "prediction": "B"
+  },
+  {
+    "index": "208",
+    "prediction": "B"
+  },
+  {
+    "index": "209",
+    "prediction": "B"
+  },
+  {
+    "index": "210",
+    "prediction": "B"
+  },
+  {
+    "index": "211",
+    "prediction": "True"
+  },
+  {
+    "index": "212",
+    "prediction": "False"
+  },
+  {
+    "index": "213",
+    "prediction": "False"
+  },
+  {
+    "index": "214",
+    "prediction": "False"
+  },
+  {
+    "index": "215",
+    "prediction": "True"
+  },
+  {
+    "index": "216",
+    "prediction": "A, C, E, F"
+  },
+  {
+    "index": "217",
+    "prediction": "A, C, E, F"
+  },
+  {
+    "index": "218",
+    "prediction": "False"
+  },
+  {
+    "index": "219",
+    "prediction": "B"
+  },
+  {
+    "index": "220",
+    "prediction": "B"
+  },
+  {
+    "index": "221",
+    "prediction": "True"
+  },
+  {
+    "index": "222",
+    "prediction": "B"
+  },
+  {
+    "index": "223",
+    "prediction": "B"
+  },
+  {
+    "index": "224",
+    "prediction": "B"
+  },
+  {
+    "index": "225",
+    "prediction": "C"
+  },
+  {
+    "index": "226",
+    "prediction": "C"
+  },
+  {
+    "index": "227",
+    "prediction": "C"
+  },
+  {
+    "index": "228",
+    "prediction": "A"
+  },
+  {
+    "index": "229",
+    "prediction": "no"
+  },
+  {
+    "index": "230",
+    "prediction": "no"
+  },
+  {
+    "index": "231",
+    "prediction": "C"
+  },
+  {
+    "index": "232",
+    "prediction": "no"
+  },
+  {
+    "index": "233",
+    "prediction": "yes"
+  },
+  {
+    "index": "234",
+    "prediction": "B, C, E"
+  },
+  {
+    "index": "235",
+    "prediction": "B, C"
+  },
+  {
+    "index": "236",
+    "prediction": "C"
+  },
+  {
+    "index": "237",
+    "prediction": "False"
+  },
+  {
+    "index": "238",
+    "prediction": "True"
+  },
+  {
+    "index": "239",
+    "prediction": "B"
+  },
+  {
+    "index": "240",
+    "prediction": "B"
+  },
+  {
+    "index": "241",
+    "prediction": "A"
+  },
+  {
+    "index": "242",
+    "prediction": "B"
+  },
+  {
+    "index": "243",
+    "prediction": "True"
+  },
+  {
+    "index": "244",
+    "prediction": "Melanoma"
+  },
+  {
+    "index": "245",
+    "prediction": "B"
+  },
+  {
+    "index": "246",
+    "prediction": "Basal cell carcinoma"
+  },
+  {
+    "index": "247",
+    "prediction": "B"
+  },
+  {
+    "index": "248",
+    "prediction": "True"
+  },
+  {
+    "index": "249",
+    "prediction": "B"
+  },
+  {
+    "index": "250",
+    "prediction": "True"
+  },
+  {
+    "index": "251",
+    "prediction": "A, B, C, D"
+  },
+  {
+    "index": "252",
+    "prediction": "False"
+  },
+  {
+    "index": "253",
+    "prediction": "A, B, C, E, G"
+  },
+  {
+    "index": "254",
+    "prediction": "B"
+  },
+  {
+    "index": "255",
+    "prediction": "A, B, D, F"
+  },
+  {
+    "index": "256",
+    "prediction": "A, B, C, E, F"
+  },
+  {
+    "index": "257",
+    "prediction": "B"
+  },
+  {
+    "index": "258",
+    "prediction": "A"
+  },
+  {
+    "index": "259",
+    "prediction": "A, B, C, E, F"
+  },
+  {
+    "index": "260",
+    "prediction": "False"
+  },
+  {
+    "index": "261",
+    "prediction": "A, B, H"
+  },
+  {
+    "index": "262",
+    "prediction": "B"
+  },
+  {
+    "index": "263",
+    "prediction": "A, B, C, D, F, G"
+  },
+  {
+    "index": "264",
+    "prediction": "False"
+  },
+  {
+    "index": "265",
+    "prediction": "True"
+  },
+  {
+    "index": "266",
+    "prediction": "B, C, D, E"
+  },
+  {
+    "index": "267",
+    "prediction": "A, B, C, D"
+  },
+  {
+    "index": "268",
+    "prediction": "False"
+  },
+  {
+    "index": "269",
+    "prediction": "False"
+  },
+  {
+    "index": "270",
+    "prediction": "C"
+  },
+  {
+    "index": "271",
+    "prediction": "A, B, C, E"
+  },
+  {
+    "index": "272",
+    "prediction": "False"
+  },
+  {
+    "index": "273",
+    "prediction": "Candida"
+  },
+  {
+    "index": "274",
+    "prediction": "B"
+  },
+  {
+    "index": "275",
+    "prediction": "C, D"
+  },
+  {
+    "index": "276",
+    "prediction": "False"
+  },
+  {
+    "index": "277",
+    "prediction": "B"
+  },
+  {
+    "index": "278",
+    "prediction": "A, B, C, D, E, F, G, H"
+  },
+  {
+    "index": "279",
+    "prediction": "A, B, C, D, F, G"
+  },
+  {
+    "index": "280",
+    "prediction": "True"
+  },
+  {
+    "index": "281",
+    "prediction": "C"
+  },
+  {
+    "index": "282",
+    "prediction": "A, B, C, E"
+  },
+  {
+    "index": "283",
+    "prediction": "B, C, E, G"
+  },
+  {
+    "index": "284",
+    "prediction": "False"
+  },
+  {
+    "index": "285",
+    "prediction": "D"
+  },
+  {
+    "index": "286",
+    "prediction": "B"
+  },
+  {
+    "index": "287",
+    "prediction": "A, B, C, D, E, F"
+  },
+  {
+    "index": "288",
+    "prediction": "True"
+  },
+  {
+    "index": "289",
+    "prediction": "False"
+  },
+  {
+    "index": "290",
+    "prediction": "False"
+  },
+  {
+    "index": "291",
+    "prediction": "False"
+  },
+  {
+    "index": "292",
+    "prediction": "False"
+  },
+  {
+    "index": "293",
+    "prediction": "A"
+  },
+  {
+    "index": "294",
+    "prediction": "D"
+  },
+  {
+    "index": "295",
+    "prediction": "A, B, C, E, F"
+  },
+  {
+    "index": "296",
+    "prediction": "False"
+  },
+  {
+    "index": "297",
+    "prediction": "A, B, C, D, E, F, G"
+  },
+  {
+    "index": "298",
+    "prediction": "False"
+  },
+  {
+    "index": "299",
+    "prediction": "A, B, C"
+  },
+  {
+    "index": "300",
+    "prediction": "A, B, C, D, E"
+  },
+  {
+    "index": "301",
+    "prediction": "False"
+  },
+  {
+    "index": "302",
+    "prediction": "A"
+  },
+  {
+    "index": "303",
+    "prediction": "B"
+  },
+  {
+    "index": "304",
+    "prediction": "False"
+  },
+  {
+    "index": "305",
+    "prediction": "False"
+  },
+  {
+    "index": "306",
+    "prediction": "False"
+  },
+  {
+    "index": "307",
+    "prediction": "False"
+  },
+  {
+    "index": "308",
+    "prediction": "C"
+  },
+  {
+    "index": "309",
+    "prediction": "False"
+  },
+  {
+    "index": "310",
+    "prediction": "True"
+  },
+  {
+    "index": "311",
+    "prediction": "False"
+  },
+  {
+    "index": "312",
+    "prediction": "B"
+  },
+  {
+    "index": "313",
+    "prediction": "C"
+  },
+  {
+    "index": "314",
+    "prediction": "True"
+  },
+  {
+    "index": "315",
+    "prediction": "True"
+  },
+  {
+    "index": "316",
+    "prediction": "True"
+  },
+  {
+    "index": "317",
+    "prediction": "True"
+  },
+  {
+    "index": "318",
+    "prediction": "False"
+  },
+  {
+    "index": "319",
+    "prediction": "True"
+  },
+  {
+    "index": "320",
+    "prediction": "C"
+  },
+  {
+    "index": "321",
+    "prediction": "True"
+  },
+  {
+    "index": "322",
+    "prediction": "False"
+  },
+  {
+    "index": "323",
+    "prediction": "True"
+  },
+  {
+    "index": "324",
+    "prediction": "False"
+  },
+  {
+    "index": "325",
+    "prediction": "True"
+  },
+  {
+    "index": "326",
+    "prediction": "A, B, C, D, E, F"
+  },
+  {
+    "index": "327",
+    "prediction": "True"
+  },
+  {
+    "index": "328",
+    "prediction": "A"
+  },
+  {
+    "index": "329",
+    "prediction": "False"
+  },
+  {
+    "index": "330",
+    "prediction": "False"
+  },
+  {
+    "index": "331",
+    "prediction": "A, B, C, D, E, H"
+  },
+  {
+    "index": "332",
+    "prediction": "False"
+  },
+  {
+    "index": "333",
+    "prediction": "False"
+  },
+  {
+    "index": "334",
+    "prediction": "False"
+  },
+  {
+    "index": "335",
+    "prediction": "False"
+  },
+  {
+    "index": "336",
+    "prediction": "False"
+  },
+  {
+    "index": "337",
+    "prediction": "False"
+  },
+  {
+    "index": "338",
+    "prediction": "True"
+  },
+  {
+    "index": "339",
+    "prediction": "True"
+  },
+  {
+    "index": "340",
+    "prediction": "A, B, C, D, E, F, G, H"
+  },
+  {
+    "index": "341",
+    "prediction": "C"
+  },
+  {
+    "index": "342",
+    "prediction": "False"
+  },
+  {
+    "index": "343",
+    "prediction": "True"
+  },
+  {
+    "index": "344",
+    "prediction": "A, B, D, E"
+  },
+  {
+    "index": "345",
+    "prediction": "A"
+  },
+  {
+    "index": "346",
+    "prediction": "A"
+  },
+  {
+    "index": "347",
+    "prediction": "B, C, D, E, F"
+  },
+  {
+    "index": "348",
+    "prediction": "Pancreas"
+  },
+  {
+    "index": "349",
+    "prediction": "A"
+  },
+  {
+    "index": "350",
+    "prediction": "D"
+  },
+  {
+    "index": "351",
+    "prediction": "True"
+  },
+  {
+    "index": "352",
+    "prediction": "True"
+  },
+  {
+    "index": "353",
+    "prediction": "True"
+  },
+  {
+    "index": "354",
+    "prediction": "A, B, F, G, H"
+  },
+  {
+    "index": "355",
+    "prediction": "A"
+  },
+  {
+    "index": "356",
+    "prediction": "A"
+  },
+  {
+    "index": "357",
+    "prediction": "Lymphoma"
+  },
+  {
+    "index": "358",
+    "prediction": "Fat"
+  },
+  {
+    "index": "359",
+    "prediction": "C"
+  },
+  {
+    "index": "360",
+    "prediction": "B"
+  },
+  {
+    "index": "361",
+    "prediction": "A, B, C, D, E, F"
+  },
+  {
+    "index": "362",
+    "prediction": "A, C, E, F"
+  },
+  {
+    "index": "363",
+    "prediction": "True"
+  },
+  {
+    "index": "364",
+    "prediction": "True"
+  },
+  {
+    "index": "365",
+    "prediction": "Positive"
+  },
+  {
+    "index": "366",
+    "prediction": "D"
+  },
+  {
+    "index": "367",
+    "prediction": "A"
+  },
+  {
+    "index": "368",
+    "prediction": "B"
+  },
+  {
+    "index": "369",
+    "prediction": "True"
+  },
+  {
+    "index": "370",
+    "prediction": "B"
+  },
+  {
+    "index": "371",
+    "prediction": "A, C"
+  },
+  {
+    "index": "372",
+    "prediction": "C"
+  },
+  {
+    "index": "373",
+    "prediction": "B"
+  },
+  {
+    "index": "374",
+    "prediction": "A"
+  },
+  {
+    "index": "375",
+    "prediction": "B"
+  },
+  {
+    "index": "376",
+    "prediction": "True"
+  },
+  {
+    "index": "377",
+    "prediction": "A, B, D"
+  },
+  {
+    "index": "378",
+    "prediction": "D"
+  },
+  {
+    "index": "379",
+    "prediction": "B"
+  },
+  {
+    "index": "380",
+    "prediction": "True"
+  },
+  {
+    "index": "381",
+    "prediction": "True"
+  },
+  {
+    "index": "386",
+    "prediction": "B"
+  },
+  {
+    "index": "387",
+    "prediction": "B"
+  },
+  {
+    "index": "388",
+    "prediction": "B"
+  },
+  {
+    "index": "389",
+    "prediction": "True"
+  },
+  {
+    "index": "390",
+    "prediction": "B"
+  },
+  {
+    "index": "391",
+    "prediction": "C. Primary sclerosing cholangitis"
+  },
+  {
+    "index": "392",
+    "prediction": "B"
+  },
+  {
+    "index": "393",
+    "prediction": "The image is not considered morphia because it shows a histological section of a tumor with a specific pattern of cellular arrangement and staining characteristics that are distinct from those typically observed in morphia. The presence of a well-defined capsule and the organized structure of the tumor cells, along with the specific staining patterns, are key features that differentiate this sample from morphia."
+  },
+  {
+    "index": "394",
+    "prediction": "B, E, H"
+  },
+  {
+    "index": "395",
+    "prediction": "B"
+  },
+  {
+    "index": "396",
+    "prediction": "B"
+  },
+  {
+    "index": "397",
+    "prediction": "D"
+  },
+  {
+    "index": "398",
+    "prediction": "A"
+  },
+  {
+    "index": "399",
+    "prediction": "C"
+  },
+  {
+    "index": "400",
+    "prediction": "True"
+  },
+  {
+    "index": "401",
+    "prediction": "False"
+  },
+  {
+    "index": "402",
+    "prediction": "True"
+  },
+  {
+    "index": "404",
+    "prediction": "False"
+  },
+  {
+    "index": "405",
+    "prediction": "A, B, C"
+  },
+  {
+    "index": "406",
+    "prediction": "Endoscopic forceps, endoscopic snare, endoscopic grasper"
+  },
+  {
+    "index": "407",
+    "prediction": "A, B, D, F"
+  },
+  {
+    "index": "408",
+    "prediction": "C"
+  },
+  {
+    "index": "409",
+    "prediction": "A, B, D, E"
+  },
+  {
+    "index": "410",
+    "prediction": "Endoscope, Forceps"
+  },
+  {
+    "index": "411",
+    "prediction": "A, B, D, E, F"
+  },
+  {
+    "index": "412",
+    "prediction": "A, B, C, D, F"
+  },
+  {
+    "index": "413",
+    "prediction": "Inflammation, ulceration, and edema"
+  },
+  {
+    "index": "414",
+    "prediction": "D, E, F"
+  },
+  {
+    "index": "415",
+    "prediction": "A, B, D"
+  },
+  {
+    "index": "416",
+    "prediction": "1"
+  },
+  {
+    "index": "417",
+    "prediction": "A, C, D, E"
+  },
+  {
+    "index": "418",
+    "prediction": "A, B, C, F"
+  },
+  {
+    "index": "419",
+    "prediction": "Yes"
+  },
+  {
+    "index": "420",
+    "prediction": "True"
+  },
+  {
+    "index": "421",
+    "prediction": "Yes"
+  },
+  {
+    "index": "422",
+    "prediction": "Endoscope, Forceps"
+  },
+  {
+    "index": "423",
+    "prediction": "1"
+  },
+  {
+    "index": "424",
+    "prediction": "A, B, C"
+  },
+  {
+    "index": "425",
+    "prediction": "C"
+  },
+  {
+    "index": "426",
+    "prediction": "Endoscope, Forceps"
+  },
+  {
+    "index": "427",
+    "prediction": "A"
+  },
+  {
+    "index": "428",
+    "prediction": "Yes"
+  },
+  {
+    "index": "429",
+    "prediction": "D"
+  },
+  {
+    "index": "430",
+    "prediction": "B"
+  },
+  {
+    "index": "431",
+    "prediction": "B"
+  },
+  {
+    "index": "432",
+    "prediction": "C"
+  },
+  {
+    "index": "433",
+    "prediction": "Yes"
+  },
+  {
+    "index": "434",
+    "prediction": "B"
+  },
+  {
+    "index": "435",
+    "prediction": "A, B, C, F"
+  },
+  {
+    "index": "436",
+    "prediction": "A, B, C, D, E"
+  },
+  {
+    "index": "437",
+    "prediction": "False"
+  },
+  {
+    "index": "438",
+    "prediction": "A, B, D"
+  },
+  {
+    "index": "439",
+    "prediction": "True"
+  },
+  {
+    "index": "440",
+    "prediction": "B"
+  },
+  {
+    "index": "441",
+    "prediction": "D"
+  },
+  {
+    "index": "442",
+    "prediction": "Yes"
+  },
+  {
+    "index": "443",
+    "prediction": "Yes"
+  },
+  {
+    "index": "444",
+    "prediction": "B"
+  },
+  {
+    "index": "445",
+    "prediction": "B"
+  },
+  {
+    "index": "446",
+    "prediction": "True"
+  },
+  {
+    "index": "447",
+    "prediction": "True"
+  },
+  {
+    "index": "448",
+    "prediction": "E"
+  },
+  {
+    "index": "449",
+    "prediction": "A, B, E"
+  },
+  {
+    "index": "450",
+    "prediction": "C"
+  },
+  {
+    "index": "451",
+    "prediction": "D"
+  },
+  {
+    "index": "452",
+    "prediction": "B"
+  },
+  {
+    "index": "453",
+    "prediction": "A, B, C, D, E"
+  },
+  {
+    "index": "454",
+    "prediction": "A, B, D"
+  },
+  {
+    "index": "455",
+    "prediction": "C. Colonic polyp"
+  },
+  {
+    "index": "456",
+    "prediction": "A"
+  },
+  {
+    "index": "457",
+    "prediction": "B"
+  },
+  {
+    "index": "458",
+    "prediction": "Hyperplastic polyp"
+  },
+  {
+    "index": "459",
+    "prediction": "A"
+  },
+  {
+    "index": "460",
+    "prediction": "A"
+  },
+  {
+    "index": "461",
+    "prediction": "True"
+  },
+  {
+    "index": "462",
+    "prediction": "B. Rectum"
+  },
+  {
+    "index": "463",
+    "prediction": "C"
+  },
+  {
+    "index": "464",
+    "prediction": "left uvula, right uvula"
+  },
+  {
+    "index": "465",
+    "prediction": "Endoscopy"
+  },
+  {
+    "index": "466",
+    "prediction": "D"
+  },
+  {
+    "index": "467",
+    "prediction": "B"
+  },
+  {
+    "index": "468",
+    "prediction": "1"
+  },
+  {
+    "index": "469",
+    "prediction": "1"
+  },
+  {
+    "index": "470",
+    "prediction": "B"
+  },
+  {
+    "index": "471",
+    "prediction": "D. Surgery"
+  },
+  {
+    "index": "472",
+    "prediction": "A, C, E, F, G"
+  },
+  {
+    "index": "473",
+    "prediction": "True"
+  },
+  {
+    "index": "474",
+    "prediction": "Gastric varices"
+  },
+  {
+    "index": "475",
+    "prediction": "B"
+  },
+  {
+    "index": "476",
+    "prediction": "D"
+  },
+  {
+    "index": "477",
+    "prediction": "B, D, F"
+  },
+  {
+    "index": "478",
+    "prediction": "B, D, F"
+  },
+  {
+    "index": "479",
+    "prediction": "A, B, C, E, F"
+  },
+  {
+    "index": "480",
+    "prediction": "A, B, C, D, E, F, G, H"
+  },
+  {
+    "index": "481",
+    "prediction": "Endoscopic snare, endoscopic grasper, endoscopic forceps"
+  },
+  {
+    "index": "482",
+    "prediction": "True"
+  },
+  {
+    "index": "483",
+    "prediction": "E, F, G, H"
+  },
+  {
+    "index": "484",
+    "prediction": "C, F"
+  },
+  {
+    "index": "485",
+    "prediction": "Both"
+  },
+  {
+    "index": "486",
+    "prediction": "True"
+  },
+  {
+    "index": "487",
+    "prediction": "True"
+  },
+  {
+    "index": "488",
+    "prediction": "A"
+  },
+  {
+    "index": "489",
+    "prediction": "B"
+  },
+  {
+    "index": "490",
+    "prediction": "A, B, C, D, E, F, G, H"
+  },
+  {
+    "index": "491",
+    "prediction": "A, C, E, F, G"
+  },
+  {
+    "index": "492",
+    "prediction": "B"
+  },
+  {
+    "index": "493",
+    "prediction": "True"
+  },
+  {
+    "index": "494",
+    "prediction": "2"
+  },
+  {
+    "index": "495",
+    "prediction": "A, B, C, D, E, F, G"
+  },
+  {
+    "index": "496",
+    "prediction": "A, B, D, E"
+  },
+  {
+    "index": "497",
+    "prediction": "Endoscope"
+  },
+  {
+    "index": "498",
+    "prediction": "B"
+  },
+  {
+    "index": "499",
+    "prediction": "A"
+  },
+  {
+    "index": "500",
+    "prediction": "B"
+  },
+  {
+    "index": "501",
+    "prediction": "C"
+  },
+  {
+    "index": "502",
+    "prediction": "B"
+  },
+  {
+    "index": "503",
+    "prediction": "A"
+  },
+  {
+    "index": "504",
+    "prediction": "Opened"
+  },
+  {
+    "index": "505",
+    "prediction": "Left"
+  },
+  {
+    "index": "506",
+    "prediction": "Damaged"
+  },
+  {
+    "index": "507",
+    "prediction": "Broken"
+  },
+  {
+    "index": "508",
+    "prediction": "Left"
+  },
+  {
+    "index": "509",
+    "prediction": "Open"
+  },
+  {
+    "index": "510",
+    "prediction": "C"
+  },
+  {
+    "index": "511",
+    "prediction": "B"
+  },
+  {
+    "index": "512",
+    "prediction": "Left"
+  },
+  {
+    "index": "513",
+    "prediction": "Left"
+  },
+  {
+    "index": "514",
+    "prediction": "True"
+  },
+  {
+    "index": "515",
+    "prediction": "True"
+  },
+  {
+    "index": "516",
+    "prediction": "Broken"
+  },
+  {
+    "index": "517",
+    "prediction": "False"
+  },
+  {
+    "index": "518",
+    "prediction": "False"
+  },
+  {
+    "index": "519",
+    "prediction": "B"
+  },
+  {
+    "index": "520",
+    "prediction": "False"
+  },
+  {
+    "index": "521",
+    "prediction": "True"
+  },
+  {
+    "index": "522",
+    "prediction": "A, C, D, F"
+  },
+  {
+    "index": "523",
+    "prediction": "A"
+  },
+  {
+    "index": "524",
+    "prediction": "A, B, C, D, E, F, G, H"
+  },
+  {
+    "index": "525",
+    "prediction": "A, B, D, E, F, G"
+  },
+  {
+    "index": "526",
+    "prediction": "A, B, C, D, E, F"
+  },
+  {
+    "index": "527",
+    "prediction": "A, B, D, F"
+  },
+  {
+    "index": "528",
+    "prediction": "A, B, D, E, F, G"
+  },
+  {
+    "index": "529",
+    "prediction": "A, B, C, D, F, G, H"
+  },
+  {
+    "index": "530",
+    "prediction": "A"
+  },
+  {
+    "index": "531",
+    "prediction": "B, D, F"
+  },
+  {
+    "index": "532",
+    "prediction": "C"
+  },
+  {
+    "index": "533",
+    "prediction": "A"
+  },
+  {
+    "index": "534",
+    "prediction": "C"
+  },
+  {
+    "index": "535",
+    "prediction": "True"
+  },
+  {
+    "index": "536",
+    "prediction": "False"
+  },
+  {
+    "index": "537",
+    "prediction": "B"
+  },
+  {
+    "index": "538",
+    "prediction": "E"
+  },
+  {
+    "index": "539",
+    "prediction": "True"
+  },
+  {
+    "index": "540",
+    "prediction": "False"
+  },
+  {
+    "index": "541",
+    "prediction": "C"
+  },
+  {
+    "index": "542",
+    "prediction": "True"
+  },
+  {
+    "index": "543",
+    "prediction": "False"
+  },
+  {
+    "index": "544",
+    "prediction": "E"
+  },
+  {
+    "index": "545",
+    "prediction": "False"
+  },
+  {
+    "index": "546",
+    "prediction": "True"
+  },
+  {
+    "index": "547",
+    "prediction": "Pleural effusion"
+  },
+  {
+    "index": "548",
+    "prediction": "True"
+  },
+  {
+    "index": "549",
+    "prediction": "False"
+  },
+  {
+    "index": "550",
+    "prediction": "True"
+  },
+  {
+    "index": "551",
+    "prediction": "A. Neoplasm"
+  },
+  {
+    "index": "552",
+    "prediction": "B"
+  },
+  {
+    "index": "553",
+    "prediction": "B"
+  },
+  {
+    "index": "554",
+    "prediction": "A, B, D, E"
+  },
+  {
+    "index": "555",
+    "prediction": "Pleural effusion, pulmonary edema/hazy opacity, pneumonia, pulmonary edema/hazy opacity, vascular congestion"
+  },
+  {
+    "index": "556",
+    "prediction": "B"
+  },
+  {
+    "index": "557",
+    "prediction": "A) Left-sided heart failure"
+  },
+  {
+    "index": "558",
+    "prediction": "A) Double arch"
+  },
+  {
+    "index": "559",
+    "prediction": "True"
+  },
+  {
+    "index": "560",
+    "prediction": "False"
+  },
+  {
+    "index": "561",
+    "prediction": "C"
+  },
+  {
+    "index": "562",
+    "prediction": "False"
+  },
+  {
+    "index": "563",
+    "prediction": "True"
+  },
+  {
+    "index": "564",
+    "prediction": "False"
+  },
+  {
+    "index": "565",
+    "prediction": "D"
+  },
+  {
+    "index": "566",
+    "prediction": "True"
+  },
+  {
+    "index": "567",
+    "prediction": "C"
+  },
+  {
+    "index": "568",
+    "prediction": "B"
+  },
+  {
+    "index": "569",
+    "prediction": "C"
+  },
+  {
+    "index": "570",
+    "prediction": "B"
+  },
+  {
+    "index": "571",
+    "prediction": "B"
+  },
+  {
+    "index": "572",
+    "prediction": "False"
+  },
+  {
+    "index": "573",
+    "prediction": "B) Enlarged"
+  },
+  {
+    "index": "574",
+    "prediction": "C"
+  },
+  {
+    "index": "575",
+    "prediction": "B) Left"
+  },
+  {
+    "index": "576",
+    "prediction": "A"
+  },
+  {
+    "index": "577",
+    "prediction": "C"
+  },
+  {
+    "index": "578",
+    "prediction": "False"
+  },
+  {
+    "index": "579",
+    "prediction": "C) Metastases"
+  },
+  {
+    "index": "580",
+    "prediction": "False"
+  },
+  {
+    "index": "581",
+    "prediction": "C"
+  },
+  {
+    "index": "582",
+    "prediction": "True"
+  },
+  {
+    "index": "583",
+    "prediction": "Right lung"
+  },
+  {
+    "index": "584",
+    "prediction": "C"
+  },
+  {
+    "index": "585",
+    "prediction": "A) The gallbladder appears distended."
+  },
+  {
+    "index": "586",
+    "prediction": "A, C, D, E"
+  },
+  {
+    "index": "587",
+    "prediction": "B) Right kidney"
+  },
+  {
+    "index": "588",
+    "prediction": "Fat stranding"
+  },
+  {
+    "index": "589",
+    "prediction": "B"
+  },
+  {
+    "index": "590",
+    "prediction": "D"
+  },
+  {
+    "index": "591",
+    "prediction": "Aorta"
+  },
+  {
+    "index": "592",
+    "prediction": "True"
+  },
+  {
+    "index": "593",
+    "prediction": "True"
+  },
+  {
+    "index": "594",
+    "prediction": "B"
+  },
+  {
+    "index": "595",
+    "prediction": "Left Lung"
+  },
+  {
+    "index": "596",
+    "prediction": "Left kidney"
+  },
+  {
+    "index": "597",
+    "prediction": "True"
+  },
+  {
+    "index": "598",
+    "prediction": "B, D"
+  },
+  {
+    "index": "599",
+    "prediction": "A, B, C, D"
+  },
+  {
+    "index": "600",
+    "prediction": "False"
+  },
+  {
+    "index": "601",
+    "prediction": "B) Left"
+  },
+  {
+    "index": "602",
+    "prediction": "A, B, D, E"
+  },
+  {
+    "index": "603",
+    "prediction": "False"
+  },
+  {
+    "index": "604",
+    "prediction": "True"
+  },
+  {
+    "index": "605",
+    "prediction": "B) Right lung base"
+  },
+  {
+    "index": "606",
+    "prediction": "Fat"
+  },
+  {
+    "index": "607",
+    "prediction": "Left"
+  },
+  {
+    "index": "608",
+    "prediction": "True"
+  },
+  {
+    "index": "609",
+    "prediction": "Left kidney"
+  },
+  {
+    "index": "610",
+    "prediction": "A, B, C, E"
+  },
+  {
+    "index": "611",
+    "prediction": "A, B, C, D, E, F"
+  },
+  {
+    "index": "612",
+    "prediction": "E, F"
+  },
+  {
+    "index": "613",
+    "prediction": "yes"
+  },
+  {
+    "index": "614",
+    "prediction": "True"
+  },
+  {
+    "index": "615",
+    "prediction": "False"
+  },
+  {
+    "index": "616",
+    "prediction": "True"
+  },
+  {
+    "index": "617",
+    "prediction": "Calcified lymph nodes"
+  },
+  {
+    "index": "618",
+    "prediction": "A, B, C, D, E, F"
+  },
+  {
+    "index": "619",
+    "prediction": "Right lower quadrant"
+  },
+  {
+    "index": "620",
+    "prediction": "A, B, C, D, E, F"
+  },
+  {
+    "index": "621",
+    "prediction": "True"
+  },
+  {
+    "index": "622",
+    "prediction": "Left frontal lobe"
+  },
+  {
+    "index": "623",
+    "prediction": "Yes"
+  },
+  {
+    "index": "624",
+    "prediction": "Posterior limbs of internal capsules"
+  },
+  {
+    "index": "625",
+    "prediction": "Left kidney"
+  },
+  {
+    "index": "626",
+    "prediction": "False"
+  },
+  {
+    "index": "627",
+    "prediction": "C) The lungs appear normal in the image."
+  },
+  {
+    "index": "628",
+    "prediction": "B) Liver"
+  },
+  {
+    "index": "629",
+    "prediction": "True"
+  },
+  {
+    "index": "630",
+    "prediction": "Left Kidney"
+  },
+  {
+    "index": "631",
+    "prediction": "Diffuse"
+  },
+  {
+    "index": "632",
+    "prediction": "False"
+  },
+  {
+    "index": "633",
+    "prediction": "Small bowel"
+  },
+  {
+    "index": "634",
+    "prediction": "A"
+  },
+  {
+    "index": "635",
+    "prediction": "True"
+  },
+  {
+    "index": "636",
+    "prediction": "A, B, C"
+  },
+  {
+    "index": "637",
+    "prediction": "False"
+  },
+  {
+    "index": "638",
+    "prediction": "True"
+  },
+  {
+    "index": "639",
+    "prediction": "Left kidney"
+  },
+  {
+    "index": "640",
+    "prediction": "False"
+  },
+  {
+    "index": "641",
+    "prediction": "False"
+  },
+  {
+    "index": "642",
+    "prediction": "True"
+  },
+  {
+    "index": "643",
+    "prediction": "Aortic dissection"
+  },
+  {
+    "index": "644",
+    "prediction": "Left hilum"
+  },
+  {
+    "index": "645",
+    "prediction": "E"
+  },
+  {
+    "index": "646",
+    "prediction": "False"
+  },
+  {
+    "index": "647",
+    "prediction": "False"
+  },
+  {
+    "index": "648",
+    "prediction": "Hip joint"
+  },
+  {
+    "index": "649",
+    "prediction": "False"
+  },
+  {
+    "index": "650",
+    "prediction": "False"
+  },
+  {
+    "index": "651",
+    "prediction": "Kidney"
+  },
+  {
+    "index": "652",
+    "prediction": "True"
+  },
+  {
+    "index": "653",
+    "prediction": "A, B, C, D, E"
+  },
+  {
+    "index": "654",
+    "prediction": "Enlarged cardiac silhouette"
+  },
+  {
+    "index": "655",
+    "prediction": "Vertebral body"
+  },
+  {
+    "index": "656",
+    "prediction": "A, B, C, D, E, F"
+  },
+  {
+    "index": "657",
+    "prediction": "Pneumonia"
+  },
+  {
+    "index": "658",
+    "prediction": "Pneumonia"
+  },
+  {
+    "index": "659",
+    "prediction": "A, B, C, D, E, F"
+  },
+  {
+    "index": "660",
+    "prediction": "True"
+  },
+  {
+    "index": "661",
+    "prediction": "C"
+  },
+  {
+    "index": "662",
+    "prediction": "Spondylosis"
+  },
+  {
+    "index": "663",
+    "prediction": "Pituitary adenoma"
+  },
+  {
+    "index": "664",
+    "prediction": "B) Posterior mediastinum"
+  },
+  {
+    "index": "665",
+    "prediction": "False"
+  },
+  {
+    "index": "666",
+    "prediction": "C"
+  },
+  {
+    "index": "667",
+    "prediction": "Mediastinal widening"
+  },
+  {
+    "index": "668",
+    "prediction": "A, B, C, D"
+  },
+  {
+    "index": "669",
+    "prediction": "False"
+  },
+  {
+    "index": "670",
+    "prediction": "Hydronephrosis"
+  },
+  {
+    "index": "671",
+    "prediction": "Liver"
+  },
+  {
+    "index": "672",
+    "prediction": "Lung opacity"
+  },
+  {
+    "index": "673",
+    "prediction": "A) Perforated gastrointestinal tract"
+  },
+  {
+    "index": "674",
+    "prediction": "Cardiovascular"
+  },
+  {
+    "index": "675",
+    "prediction": "Left Lung"
+  },
+  {
+    "index": "676",
+    "prediction": "True"
+  },
+  {
+    "index": "677",
+    "prediction": "False"
+  },
+  {
+    "index": "678",
+    "prediction": "False"
+  },
+  {
+    "index": "679",
+    "prediction": "Foreign body"
+  },
+  {
+    "index": "680",
+    "prediction": "A, B, C"
+  },
+  {
+    "index": "681",
+    "prediction": "C"
+  },
+  {
+    "index": "682",
+    "prediction": "False"
+  },
+  {
+    "index": "683",
+    "prediction": "True"
+  },
+  {
+    "index": "684",
+    "prediction": "Small"
+  },
+  {
+    "index": "685",
+    "prediction": "Gallstones"
+  },
+  {
+    "index": "686",
+    "prediction": "B) Caudate lobe"
+  },
+  {
+    "index": "687",
+    "prediction": "C) Pancreas"
+  },
+  {
+    "index": "688",
+    "prediction": "False"
+  },
+  {
+    "index": "689",
+    "prediction": "Aortic dissection"
+  },
+  {
+    "index": "690",
+    "prediction": "Left axilla"
+  },
+  {
+    "index": "691",
+    "prediction": "True"
+  },
+  {
+    "index": "692",
+    "prediction": "True"
+  },
+  {
+    "index": "693",
+    "prediction": "The bright ring around the lesion indicates vasogenic edema, which is a type of brain swelling caused by the leakage of fluid from blood vessels into the brain tissue."
+  },
+  {
+    "index": "694",
+    "prediction": "Right frontal lobe"
+  },
+  {
+    "index": "695",
+    "prediction": "False"
+  },
+  {
+    "index": "696",
+    "prediction": "B"
+  },
+  {
+    "index": "697",
+    "prediction": "Left cerebellum, right cerebellum, right temporal lobe, right occipital lobe"
+  },
+  {
+    "index": "698",
+    "prediction": "True"
+  },
+  {
+    "index": "699",
+    "prediction": "B"
+  },
+  {
+    "index": "700",
+    "prediction": "C) Right frontal lobe"
+  },
+  {
+    "index": "701",
+    "prediction": "Left Sylvian fissure"
+  },
+  {
+    "index": "702",
+    "prediction": "Medical process"
+  },
+  {
+    "index": "703",
+    "prediction": "Both"
+  },
+  {
+    "index": "704",
+    "prediction": "abscess"
+  },
+  {
+    "index": "705",
+    "prediction": "Temporal lobe"
+  },
+  {
+    "index": "706",
+    "prediction": "True"
+  },
+  {
+    "index": "707",
+    "prediction": "True"
+  },
+  {
+    "index": "708",
+    "prediction": "B"
+  },
+  {
+    "index": "709",
+    "prediction": "Frontal lobe"
+  },
+  {
+    "index": "710",
+    "prediction": "B) Posterior Reversible Encephalopathy Syndrome (PRES)"
+  },
+  {
+    "index": "711",
+    "prediction": "Left temporal lobe"
+  },
+  {
+    "index": "712",
+    "prediction": "Left hilar region"
+  },
+  {
+    "index": "713",
+    "prediction": "True"
+  },
+  {
+    "index": "714",
+    "prediction": "True"
+  },
+  {
+    "index": "715",
+    "prediction": "no"
+  },
+  {
+    "index": "716",
+    "prediction": "D"
+  },
+  {
+    "index": "717",
+    "prediction": "Left side of abdomen"
+  },
+  {
+    "index": "718",
+    "prediction": "A) Cyst"
+  },
+  {
+    "index": "719",
+    "prediction": "True"
+  },
+  {
+    "index": "720",
+    "prediction": "False"
+  },
+  {
+    "index": "721",
+    "prediction": "True"
+  },
+  {
+    "index": "722",
+    "prediction": "True"
+  },
+  {
+    "index": "723",
+    "prediction": "Left"
+  },
+  {
+    "index": "724",
+    "prediction": "B, C, D"
+  },
+  {
+    "index": "725",
+    "prediction": "Upper lung fields"
+  },
+  {
+    "index": "726",
+    "prediction": "True"
+  },
+  {
+    "index": "727",
+    "prediction": "True"
+  },
+  {
+    "index": "728",
+    "prediction": "Cystic"
+  },
+  {
+    "index": "729",
+    "prediction": "False"
+  },
+  {
+    "index": "730",
+    "prediction": "A, C, E, F"
+  },
+  {
+    "index": "731",
+    "prediction": "A, C, E, F"
+  },
+  {
+    "index": "732",
+    "prediction": "True"
+  },
+  {
+    "index": "733",
+    "prediction": "True"
+  },
+  {
+    "index": "734",
+    "prediction": "A, B, D, F"
+  },
+  {
+    "index": "735",
+    "prediction": "Upper lobes"
+  },
+  {
+    "index": "736",
+    "prediction": "C"
+  },
+  {
+    "index": "737",
+    "prediction": "Right side of abdomen"
+  },
+  {
+    "index": "738",
+    "prediction": "Diverticulitis"
+  },
+  {
+    "index": "739",
+    "prediction": "B. Central nervous system infection"
+  },
+  {
+    "index": "740",
+    "prediction": "False"
+  },
+  {
+    "index": "741",
+    "prediction": "Its enlargement"
+  },
+  {
+    "index": "742",
+    "prediction": "1"
+  },
+  {
+    "index": "743",
+    "prediction": "Left kidney"
+  },
+  {
+    "index": "744",
+    "prediction": "Parietal lobe"
+  },
+  {
+    "index": "745",
+    "prediction": "True"
+  },
+  {
+    "index": "746",
+    "prediction": "True"
+  },
+  {
+    "index": "747",
+    "prediction": "D"
+  },
+  {
+    "index": "748",
+    "prediction": "Right Sylvian fissure"
+  },
+  {
+    "index": "749",
+    "prediction": "Pituitary"
+  },
+  {
+    "index": "750",
+    "prediction": "B"
+  },
+  {
+    "index": "751",
+    "prediction": "C"
+  },
+  {
+    "index": "752",
+    "prediction": "Left Lobe"
+  },
+  {
+    "index": "753",
+    "prediction": "B, D, F"
+  },
+  {
+    "index": "754",
+    "prediction": "False"
+  },
+  {
+    "index": "755",
+    "prediction": "F"
+  },
+  {
+    "index": "756",
+    "prediction": "True"
+  },
+  {
+    "index": "757",
+    "prediction": "Intussusception"
+  },
+  {
+    "index": "758",
+    "prediction": "False"
+  },
+  {
+    "index": "759",
+    "prediction": "False"
+  },
+  {
+    "index": "760",
+    "prediction": "True"
+  },
+  {
+    "index": "761",
+    "prediction": "Right-sided pleural effusion"
+  },
+  {
+    "index": "762",
+    "prediction": "True"
+  },
+  {
+    "index": "763",
+    "prediction": "Pituitary"
+  },
+  {
+    "index": "764",
+    "prediction": "C"
+  },
+  {
+    "index": "765",
+    "prediction": "B. Subdural hemorrhage"
+  },
+  {
+    "index": "766",
+    "prediction": "True"
+  },
+  {
+    "index": "767",
+    "prediction": "Brain Edema"
+  },
+  {
+    "index": "768",
+    "prediction": "Cerebrospinal fluid"
+  },
+  {
+    "index": "769",
+    "prediction": "A, B, D, F"
+  },
+  {
+    "index": "770",
+    "prediction": "Right frontal lobe"
+  },
+  {
+    "index": "771",
+    "prediction": "True"
+  },
+  {
+    "index": "772",
+    "prediction": "B. Subdural hematoma"
+  },
+  {
+    "index": "773",
+    "prediction": "True"
+  },
+  {
+    "index": "774",
+    "prediction": "True"
+  },
+  {
+    "index": "775",
+    "prediction": "C. Atherosclerotic calcification"
+  },
+  {
+    "index": "776",
+    "prediction": "True"
+  },
+  {
+    "index": "777",
+    "prediction": "A, B, C"
+  },
+  {
+    "index": "778",
+    "prediction": "A"
+  },
+  {
+    "index": "779",
+    "prediction": "Vascular"
+  },
+  {
+    "index": "780",
+    "prediction": "Basal ganglia, thalamus, and internal capsule"
+  },
+  {
+    "index": "781",
+    "prediction": "C"
+  },
+  {
+    "index": "782",
+    "prediction": "A, B, C, D, E, F"
+  },
+  {
+    "index": "783",
+    "prediction": "Right Lung"
+  },
+  {
+    "index": "784",
+    "prediction": "Brain"
+  },
+  {
+    "index": "785",
+    "prediction": "C. Right middle cerebral artery (MCA)"
+  },
+  {
+    "index": "786",
+    "prediction": "The image shows multiple ring-enhancing lesions in the brain, which is an abnormal finding."
+  },
+  {
+    "index": "787",
+    "prediction": "B"
+  },
+  {
+    "index": "788",
+    "prediction": "Heterogenous"
+  },
+  {
+    "index": "789",
+    "prediction": "A, C, D"
+  },
+  {
+    "index": "790",
+    "prediction": "False"
+  },
+  {
+    "index": "791",
+    "prediction": "True"
+  },
+  {
+    "index": "792",
+    "prediction": "Left"
+  },
+  {
+    "index": "793",
+    "prediction": "Pituitary"
+  },
+  {
+    "index": "794",
+    "prediction": "B"
+  },
+  {
+    "index": "795",
+    "prediction": "Diffusion restriction"
+  },
+  {
+    "index": "796",
+    "prediction": "True"
+  },
+  {
+    "index": "797",
+    "prediction": "4th ventricle"
+  },
+  {
+    "index": "798",
+    "prediction": "D"
+  },
+  {
+    "index": "799",
+    "prediction": "False"
+  },
+  {
+    "index": "800",
+    "prediction": "A, B, D, E, F"
+  },
+  {
+    "index": "801",
+    "prediction": "Pituitary Fossa"
+  },
+  {
+    "index": "802",
+    "prediction": "True"
+  },
+  {
+    "index": "803",
+    "prediction": "Right medial and lateral rectus"
+  },
+  {
+    "index": "804",
+    "prediction": "Lacunar infarcts"
+  },
+  {
+    "index": "805",
+    "prediction": "A, C, D"
+  },
+  {
+    "index": "806",
+    "prediction": "Right temporal lobe"
+  },
+  {
+    "index": "807",
+    "prediction": "Hyperdensities represent hemorrhage"
+  },
+  {
+    "index": "808",
+    "prediction": "True"
+  },
+  {
+    "index": "809",
+    "prediction": "True"
+  },
+  {
+    "index": "810",
+    "prediction": "Enhancing mass"
+  },
+  {
+    "index": "811",
+    "prediction": "4th ventricle"
+  },
+  {
+    "index": "812",
+    "prediction": "False"
+  },
+  {
+    "index": "813",
+    "prediction": "Left frontal lobe, right frontal lobe, right parietal lobe, left parietal lobe, left temporal lobe, right temporal lobe"
+  },
+  {
+    "index": "814",
+    "prediction": "Left Sylvian fissure"
+  },
+  {
+    "index": "815",
+    "prediction": "False"
+  },
+  {
+    "index": "816",
+    "prediction": "Left cerebellum, right cerebellum"
+  },
+  {
+    "index": "817",
+    "prediction": "A, B, D"
+  },
+  {
+    "index": "818",
+    "prediction": "False"
+  },
+  {
+    "index": "819",
+    "prediction": "Pons"
+  },
+  {
+    "index": "820",
+    "prediction": "C"
+  },
+  {
+    "index": "821",
+    "prediction": "False"
+  },
+  {
+    "index": "822",
+    "prediction": "True"
+  },
+  {
+    "index": "823",
+    "prediction": "Left frontal lobe"
+  },
+  {
+    "index": "824",
+    "prediction": "A, B, D, F"
+  },
+  {
+    "index": "825",
+    "prediction": "False"
+  },
+  {
+    "index": "826",
+    "prediction": "Pons"
+  },
+  {
+    "index": "827",
+    "prediction": "A, B, C, D, E"
+  },
+  {
+    "index": "828",
+    "prediction": "White"
+  },
+  {
+    "index": "829",
+    "prediction": "Multiple sclerosis"
+  },
+  {
+    "index": "830",
+    "prediction": "False"
+  },
+  {
+    "index": "831",
+    "prediction": "Left"
+  },
+  {
+    "index": "832",
+    "prediction": "B"
+  },
+  {
+    "index": "833",
+    "prediction": "True"
+  },
+  {
+    "index": "834",
+    "prediction": "C"
+  },
+  {
+    "index": "835",
+    "prediction": "True"
+  },
+  {
+    "index": "836",
+    "prediction": "Cranial nerves III, IV, and VI"
+  },
+  {
+    "index": "837",
+    "prediction": "Left frontal lobe"
+  },
+  {
+    "index": "838",
+    "prediction": "FLAIR"
+  },
+  {
+    "index": "839",
+    "prediction": "False"
+  },
+  {
+    "index": "840",
+    "prediction": "True"
+  },
+  {
+    "index": "841",
+    "prediction": "B"
+  },
+  {
+    "index": "842",
+    "prediction": "The most alarming aspect of this nuclear medicine image is the presence of a large, intense area of radiotracer uptake in the left upper quadrant of the abdomen, which is consistent with a large abscess. This finding is concerning as it indicates a significant pathological process that requires prompt medical attention and treatment."
+  },
+  {
+    "index": "843",
+    "prediction": "Aortic dissection"
+  },
+  {
+    "index": "844",
+    "prediction": "the presence of a large calcified mass in the calcaneus"
+  },
+  {
+    "index": "845",
+    "prediction": "ankle joint"
+  },
+  {
+    "index": "846",
+    "prediction": "femoral head"
+  },
+  {
+    "index": "847",
+    "prediction": "the large size of the uterus"
+  },
+  {
+    "index": "848",
+    "prediction": "D"
+  },
+  {
+    "index": "849",
+    "prediction": "B"
+  },
+  {
+    "index": "850",
+    "prediction": "C"
+  },
+  {
+    "index": "851",
+    "prediction": "B"
+  },
+  {
+    "index": "852",
+    "prediction": "C"
+  },
+  {
+    "index": "853",
+    "prediction": "B"
+  },
+  {
+    "index": "854",
+    "prediction": "A, B, D, E"
+  },
+  {
+    "index": "855",
+    "prediction": "A, B, D"
+  },
+  {
+    "index": "856",
+    "prediction": "A, B, C, D"
+  },
+  {
+    "index": "857",
+    "prediction": "A, C, D"
+  },
+  {
+    "index": "858",
+    "prediction": "B, D"
+  },
+  {
+    "index": "859",
+    "prediction": "A, B, D, E, G, H"
+  },
+  {
+    "index": "860",
+    "prediction": "A, B, C, F, G"
+  },
+  {
+    "index": "861",
+    "prediction": "B"
+  },
+  {
+    "index": "862",
+    "prediction": "A"
+  },
+  {
+    "index": "863",
+    "prediction": "A, B, C, D, E, F, H"
+  },
+  {
+    "index": "864",
+    "prediction": "D"
+  },
+  {
+    "index": "865",
+    "prediction": "A, B, C, E, F, G"
+  },
+  {
+    "index": "866",
+    "prediction": "A, B, C, D, E"
+  },
+  {
+    "index": "867",
+    "prediction": "A, B, E"
+  },
+  {
+    "index": "868",
+    "prediction": "A, B, D, F, G, H"
+  },
+  {
+    "index": "869",
+    "prediction": "dilated ureter"
+  },
+  {
+    "index": "870",
+    "prediction": "polyps"
+  },
+  {
+    "index": "871",
+    "prediction": "C"
+  },
+  {
+    "index": "872",
+    "prediction": "True"
+  },
+  {
+    "index": "873",
+    "prediction": "True"
+  },
+  {
+    "index": "874",
+    "prediction": "True"
+  },
+  {
+    "index": "875",
+    "prediction": "True"
+  },
+  {
+    "index": "876",
+    "prediction": "blind ending bowel"
+  },
+  {
+    "index": "877",
+    "prediction": "C. Colo-colic intussusception"
+  },
+  {
+    "index": "878",
+    "prediction": "D"
+  },
+  {
+    "index": "879",
+    "prediction": "A, B, C, D, E"
+  },
+  {
+    "index": "880",
+    "prediction": "B. Microcystic (serous) adenoma of the pancreas"
+  },
+  {
+    "index": "881",
+    "prediction": "A, B, E, F"
+  },
+  {
+    "index": "882",
+    "prediction": "Aortic dissection"
+  },
+  {
+    "index": "883",
+    "prediction": "Lung lesion"
+  },
+  {
+    "index": "884",
+    "prediction": "A, B, C, D, E, F, G, H"
+  },
+  {
+    "index": "885",
+    "prediction": "A, B, C, E, F, G, H"
+  },
+  {
+    "index": "886",
+    "prediction": "A. Nontraumatic subarachnoid hemorrhage"
+  },
+  {
+    "index": "887",
+    "prediction": "A, B, C, D, F, G"
+  },
+  {
+    "index": "888",
+    "prediction": "B. Hydrocephalus"
+  },
+  {
+    "index": "889",
+    "prediction": "B. Inguinal hernia involving the bladder"
+  },
+  {
+    "index": "890",
+    "prediction": "Enlarged lymph nodes"
+  },
+  {
+    "index": "891",
+    "prediction": "A. Adenomyosis"
+  },
+  {
+    "index": "892",
+    "prediction": "A, B, C, D, E, F"
+  },
+  {
+    "index": "893",
+    "prediction": "D"
+  },
+  {
+    "index": "894",
+    "prediction": "D. Irregular bone edema"
+  },
+  {
+    "index": "895",
+    "prediction": "D"
+  },
+  {
+    "index": "896",
+    "prediction": "Bone marrow edema"
+  },
+  {
+    "index": "897",
+    "prediction": "the large mass in the right frontal lobe"
+  },
+  {
+    "index": "898",
+    "prediction": "A, B, C, D, E, F, H"
+  },
+  {
+    "index": "899",
+    "prediction": "C"
+  },
+  {
+    "index": "900",
+    "prediction": "A"
+  },
+  {
+    "index": "901",
+    "prediction": "B. Hemimegalencephaly"
+  },
+  {
+    "index": "902",
+    "prediction": "Brain"
+  },
+  {
+    "index": "903",
+    "prediction": "Intussusception"
+  },
+  {
+    "index": "904",
+    "prediction": "Osteosclerosis"
+  },
+  {
+    "index": "905",
+    "prediction": "A"
+  },
+  {
+    "index": "906",
+    "prediction": "The most alarming aspect of this image is the presence of a large, irregularly shaped mass in the right upper lobe of the lung, which is likely a malignant tumor. This finding is concerning and requires further investigation and appropriate treatment."
+  },
+  {
+    "index": "907",
+    "prediction": "A, B, C, D, E, F"
+  },
+  {
+    "index": "908",
+    "prediction": "The primary abnormality in this image is a large, irregularly shaped mass in the right frontal lobe of the brain, which is causing a significant mass effect and compression of the surrounding brain structures."
+  },
+  {
+    "index": "909",
+    "prediction": "Enlarged pituitary gland"
+  },
+  {
+    "index": "910",
+    "prediction": "A"
+  },
+  {
+    "index": "911",
+    "prediction": "Enlarged ventricles"
+  },
+  {
+    "index": "912",
+    "prediction": "Enlarged pituitary gland"
+  },
+  {
+    "index": "913",
+    "prediction": "Enlarged lymph nodes"
+  },
+  {
+    "index": "914",
+    "prediction": "Hydronephrosis"
+  },
+  {
+    "index": "915",
+    "prediction": "C. Meningioma"
+  },
+  {
+    "index": "916",
+    "prediction": "The most alarming aspect of this image is the presence of a large, irregularly shaped mass within the gallbladder, which is likely a gallbladder polyp or a gallbladder cancer. The mass appears to be invading the gallbladder wall and extending into the surrounding tissues, which is a concerning finding that requires further evaluation and management."
+  },
+  {
+    "index": "917",
+    "prediction": "Bone marrow edema"
+  },
+  {
+    "index": "918",
+    "prediction": "Fracture"
+  },
+  {
+    "index": "919",
+    "prediction": "C"
+  },
+  {
+    "index": "920",
+    "prediction": "Intraventricular hemorrhage"
+  },
+  {
+    "index": "921",
+    "prediction": "Bone cyst"
+  },
+  {
+    "index": "922",
+    "prediction": "Enlarged pituitary gland"
+  },
+  {
+    "index": "923",
+    "prediction": "A"
+  },
+  {
+    "index": "924",
+    "prediction": "Aneurysm"
+  },
+  {
+    "index": "925",
+    "prediction": "Bone erosion"
+  },
+  {
+    "index": "926",
+    "prediction": "Fracture"
+  },
+  {
+    "index": "927",
+    "prediction": "Hydronephrosis"
+  },
+  {
+    "index": "928",
+    "prediction": "The most alarming aspect of this image is the presence of a large, heterogeneous mass in the right cerebellopontine angle, which is causing significant compression and displacement of the brainstem and cerebellum. This mass is likely a tumor or other space-occupying lesion that is exerting a mass effect on the surrounding brain structures, which can lead to serious neurological symptoms and complications if left untreated."
+  },
+  {
+    "index": "929",
+    "prediction": "The most alarming aspect of this image is the presence of a large, irregularly shaped mass in the right frontal lobe, which is causing significant mass effect and displacement of the surrounding brain structures. This finding is highly concerning and likely indicates the presence of a space-occupying lesion, such as a tumor or other pathological process, that requires prompt medical evaluation and management."
+  },
+  {
+    "index": "930",
+    "prediction": "Cyst"
+  },
+  {
+    "index": "931",
+    "prediction": "A"
+  },
+  {
+    "index": "932",
+    "prediction": "Enlarged pituitary gland"
+  },
+  {
+    "index": "933",
+    "prediction": "left frontal lobe mass"
+  },
+  {
+    "index": "934",
+    "prediction": "scapular winging"
+  },
+  {
+    "index": "935",
+    "prediction": "Aortic dissection"
+  },
+  {
+    "index": "936",
+    "prediction": "B, C, D, E, F, G, H"
+  },
+  {
+    "index": "937",
+    "prediction": "C. Hydrocephalus"
+  },
+  {
+    "index": "938",
+    "prediction": "Enlarged pituitary gland"
+  },
+  {
+    "index": "939",
+    "prediction": "The primary abnormality in this image is a dissection of the left subclavian artery."
+  },
+  {
+    "index": "940",
+    "prediction": "The most alarming aspect of this image is the presence of a large, irregularly shaped, and heterogeneous mass within the knee joint, which is indicative of a significant pathological process, such as a tumor or infection. The mass appears to be causing displacement and distortion of the normal joint structures, which could lead to severe pain, swelling, and impaired joint function if left untreated."
+  },
+  {
+    "index": "941",
+    "prediction": "True"
+  },
+  {
+    "index": "942",
+    "prediction": "B"
+  },
+  {
+    "index": "943",
+    "prediction": "A, B, C, E, F"
+  },
+  {
+    "index": "944",
+    "prediction": "B"
+  },
+  {
+    "index": "945",
+    "prediction": "True"
+  },
+  {
+    "index": "946",
+    "prediction": "B. Traumatic pseudoaneurysm"
+  },
+  {
+    "index": "947",
+    "prediction": "dilated gallbladder"
+  },
+  {
+    "index": "948",
+    "prediction": "enlarged lymph nodes"
+  },
+  {
+    "index": "949",
+    "prediction": "cerebellar atrophy"
+  },
+  {
+    "index": "950",
+    "prediction": "The most alarming aspect of this image is the presence of a large, heterogeneous mass in the right maxillary sinus, which is causing significant destruction of the surrounding bone and erosion of the orbital roof. This indicates an aggressive, potentially malignant process that is rapidly expanding and compromising the structural integrity of the maxillary sinus and orbital region."
+  },
+  {
+    "index": "951",
+    "prediction": "diffuse leptomeningeal enhancement"
+  },
+  {
+    "index": "952",
+    "prediction": "B"
+  },
+  {
+    "index": "953",
+    "prediction": "A, D, F, H"
+  },
+  {
+    "index": "954",
+    "prediction": "B"
+  },
+  {
+    "index": "955",
+    "prediction": "A, B, E, G"
+  },
+  {
+    "index": "956",
+    "prediction": "transverse"
+  },
+  {
+    "index": "957",
+    "prediction": "transverse"
+  },
+  {
+    "index": "958",
+    "prediction": "Musculoskeletal"
+  },
+  {
+    "index": "959",
+    "prediction": "spine"
+  },
+  {
+    "index": "960",
+    "prediction": "head"
+  },
+  {
+    "index": "961",
+    "prediction": "brain"
+  },
+  {
+    "index": "962",
+    "prediction": "A"
+  },
+  {
+    "index": "963",
+    "prediction": "spine"
+  },
+  {
+    "index": "964",
+    "prediction": "cardiovascular"
+  },
+  {
+    "index": "965",
+    "prediction": "C"
+  },
+  {
+    "index": "966",
+    "prediction": "cardiovascular"
+  },
+  {
+    "index": "967",
+    "prediction": "respiratory system"
+  },
+  {
+    "index": "968",
+    "prediction": "False"
+  },
+  {
+    "index": "969",
+    "prediction": "respiratory system"
+  },
+  {
+    "index": "970",
+    "prediction": "False"
+  },
+  {
+    "index": "971",
+    "prediction": "Brain"
+  },
+  {
+    "index": "972",
+    "prediction": "B"
+  },
+  {
+    "index": "973",
+    "prediction": "B"
+  },
+  {
+    "index": "975",
+    "prediction": "B, C, F"
+  },
+  {
+    "index": "976",
+    "prediction": "Intestinal obstruction"
+  },
+  {
+    "index": "977",
+    "prediction": "False"
+  },
+  {
+    "index": "978",
+    "prediction": "Pancreatic cancer"
+  },
+  {
+    "index": "979",
+    "prediction": "A, B, C, E, F"
+  },
+  {
+    "index": "980",
+    "prediction": "A"
+  },
+  {
+    "index": "981",
+    "prediction": "A"
+  },
+  {
+    "index": "982",
+    "prediction": "C"
+  },
+  {
+    "index": "983",
+    "prediction": "C, D, F"
+  },
+  {
+    "index": "984",
+    "prediction": "Enlarged lymph nodes"
+  },
+  {
+    "index": "985",
+    "prediction": "False"
+  },
+  {
+    "index": "986",
+    "prediction": "False"
+  },
+  {
+    "index": "987",
+    "prediction": "A, B, C"
+  },
+  {
+    "index": "988",
+    "prediction": "C. Obstruction of blood flow"
+  },
+  {
+    "index": "989",
+    "prediction": "True"
+  },
+  {
+    "index": "990",
+    "prediction": "False"
+  },
+  {
+    "index": "991",
+    "prediction": "False"
+  },
+  {
+    "index": "992",
+    "prediction": "False"
+  },
+  {
+    "index": "993",
+    "prediction": "False"
+  },
+  {
+    "index": "994",
+    "prediction": "B"
+  },
+  {
+    "index": "995",
+    "prediction": "False"
+  },
+  {
+    "index": "996",
+    "prediction": "B"
+  },
+  {
+    "index": "997",
+    "prediction": "B"
+  },
+  {
+    "index": "998",
+    "prediction": "B"
+  },
+  {
+    "index": "999",
+    "prediction": "True"
+  },
+  {
+    "index": "1000",
+    "prediction": "B"
+  },
+  {
+    "index": "1001",
+    "prediction": "B"
+  },
+  {
+    "index": "1002",
+    "prediction": "D"
+  },
+  {
+    "index": "1003",
+    "prediction": "B. Regular monitoring and possibly minor intervention."
+  },
+  {
+    "index": "1004",
+    "prediction": "B. Surgical resection"
+  },
+  {
+    "index": "1005",
+    "prediction": "Fibroadenoma"
+  },
+  {
+    "index": "1006",
+    "prediction": "False"
+  },
+  {
+    "index": "1007",
+    "prediction": "False"
+  },
+  {
+    "index": "1008",
+    "prediction": "False"
+  },
+  {
+    "index": "1009",
+    "prediction": "False"
+  },
+  {
+    "index": "1010",
+    "prediction": "False"
+  },
+  {
+    "index": "1011",
+    "prediction": "False"
+  },
+  {
+    "index": "1012",
+    "prediction": "True"
+  },
+  {
+    "index": "1013",
+    "prediction": "True"
+  },
+  {
+    "index": "1014",
+    "prediction": "True"
+  },
+  {
+    "index": "1015",
+    "prediction": "True"
+  },
+  {
+    "index": "1016",
+    "prediction": "True"
+  },
+  {
+    "index": "1017",
+    "prediction": "C"
+  },
+  {
+    "index": "1018",
+    "prediction": "C"
+  },
+  {
+    "index": "1019",
+    "prediction": "C"
+  },
+  {
+    "index": "1020",
+    "prediction": "C"
+  },
+  {
+    "index": "1021",
+    "prediction": "C"
+  },
+  {
+    "index": "1022",
+    "prediction": "Ultrasound"
+  },
+  {
+    "index": "1023",
+    "prediction": "D"
+  },
+  {
+    "index": "1024",
+    "prediction": "Lymph node"
+  },
+  {
+    "index": "1025",
+    "prediction": "A"
+  },
+  {
+    "index": "1026",
+    "prediction": "Tendon"
+  },
+  {
+    "index": "1027",
+    "prediction": "C"
+  },
+  {
+    "index": "1028",
+    "prediction": "D"
+  },
+  {
+    "index": "1029",
+    "prediction": "D"
+  },
+  {
+    "index": "1030",
+    "prediction": "B"
+  },
+  {
+    "index": "1031",
+    "prediction": "B"
+  },
+  {
+    "index": "1032",
+    "prediction": "A"
+  },
+  {
+    "index": "1033",
+    "prediction": "C"
+  },
+  {
+    "index": "1034",
+    "prediction": "B"
+  },
+  {
+    "index": "1035",
+    "prediction": "C"
+  },
+  {
+    "index": "1036",
+    "prediction": "A"
+  },
+  {
+    "index": "1037",
+    "prediction": "B"
+  },
+  {
+    "index": "1038",
+    "prediction": "A"
+  },
+  {
+    "index": "1039",
+    "prediction": "B"
+  },
+  {
+    "index": "1040",
+    "prediction": "B"
+  },
+  {
+    "index": "1041",
+    "prediction": "C"
+  },
+  {
+    "index": "1042",
+    "prediction": "A"
+  },
+  {
+    "index": "1043",
+    "prediction": "A"
+  },
+  {
+    "index": "1044",
+    "prediction": "D"
+  },
+  {
+    "index": "1045",
+    "prediction": "C"
+  },
+  {
+    "index": "1046",
+    "prediction": "C"
+  },
+  {
+    "index": "1047",
+    "prediction": "1000"
+  },
+  {
+    "index": "1048",
+    "prediction": "D"
+  }
+]

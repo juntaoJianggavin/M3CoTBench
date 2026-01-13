@@ -1,0 +1,98 @@
+# Task Overview
+Given a solution with multiple reasoning steps for an image-based problem, reformat it into well-structured steps and evaluate their correctness.
+
+# Step 1: Reformatting the Solution
+Convert the unstructured solution into distinct reasoning steps while:
+- Preserving all original content and order
+- Not adding new interpretations
+- Not omitting any steps
+
+## Step Types
+1. Image Modality or Examination Types
+   - Describes the imaging type or procedure used (e.g., CT, MRI, histology,endoscopy, Anterior segment slit lamp examination, scanning laser ophthalmoscopy).
+   - Focuses on technical aspects without interpretation.
+
+2. Key Image Feature Analysis
+   - Pure visual observations obtained from the image.
+   - Describes visible structures or abnormalities in the image. (e.g., The eye exhibits notable redness).
+   - Pure observation without inference.
+
+3. Identification, Localization, or Diagnostic Conclusions or other Conclusions
+   - Provides specific findings or diagnosis based on image features. (e.g.,The likely diagnosis based on this image could be Coats' disease).
+   - Includes reasoning and clinical conclusions.
+   - The location of the abnormalities or organs.
+   - Classification conclusion for cells or organs.  (e.g., The cell is Basophil.).
+   - Recognition conclusion for instruments or their processes. (e.g., The current state of the monopolar curved scissors is cauterization.).
+   - Other conclusions. (e.g., The red area in the right image represents in the left image is the pubic symphysis.)
+
+4.Knowledge-Based / Differential / Exploratory Analysis
+   - This is not mandatory and is only required for those requiring additional analysis.
+   - Includes disease progression prediction, organ/cell function, treatment or further examination suggestions, cause analysis of disease or abnormalities, other medical knowledge, and step-by-step analysis of multiple-choice options.
+
+
+## Step Requirements
+- Each step must be atomic (one conclusion per step)
+- No content duplication across steps
+
+# Step 2: Evaluating Correctness
+Evaluate each step against:
+
+## Ground Truth Matching
+For modality or examination types:
+- Must strictly correspond to ground truth; different wording allowed if meaning is equivalent.
+- MRI T1/T2/DWI sequences are considered different modalities. Endoscopy answers must exactly match the type, e.g., ENT Endoscopy, gastroscopy, capsule endoscopy,laparoscopy and so on.
+- Various synonymous expressions for 'Section stained with hematoxylin and eosin (H&E)', e.g., H&E-stained slide are all acceptable.
+
+For image feature description:
+- Mostly-overlap matching: Answers that match the majority of the ground truth and convey the same meaning are considered correct.
+
+For key conclusions:
+- Should strictly correspond to ground truth; different wording allowed if meaning is equivalent.
+
+For additional analysis:
+- Mostly-overlap matching: Answers that match the majority of the ground truth and convey the same meaning are considered correct.
+
+
+## Reasonableness Check Again
+Step must:
+- Logic is valid
+- Step information must not contradict any ground truth or correct answer
+- Step information must support or be neutral to correct answer
+
+
+## Judgement Categories
+- "Match": Aligns with ground truth
+- "Wrong": Invalid or contradictory
+- "N/A": For background information steps
+
+# Output Requirements
+1. The output format MUST be in valid JSON format without ANY other content.
+2. For highly repetitive patterns, output it as a single step.
+
+Here is the json output format:
+## Output Format
+[
+  {{
+    "step_type": "modality or examination types|image feature description|key conclusions| additional analysis|Restatement of the question"
+    "Step information": "Step result",
+    "judgment": "Match|Wrong|N/A"
+  }}
+]
+
+Here is the problem, and the solution that needs to be reformatted to steps:
+
+[Problem]
+
+{question}
+
+[Solution]
+
+{solution}
+
+[Correct Answer]
+
+{answer}
+
+[Ground Truth Information]
+
+{gt_annotation}

@@ -1,0 +1,175 @@
+global:
+  batch_size: 1
+  num_workers: 2
+  use_accelerate: true
+  use_parallel: true
+  cot_enabled: true
+  direct_enabled: true
+  default_max_new_tokens: 1024
+  output_format: "json"
+
+models:
+  # general
+    
+  LLaVA-CoT:
+    type: "general"
+    module: "llavacot"
+    model_path: "../pretrained/LLaVA-CoT/Llama-3.2V-11B-cot"
+    vision_tower: "openai/clip-vit-large-patch14-336"
+    trust_remote_code: true
+    max_new_tokens: 3000
+    temperature: 0.1
+
+    
+  Gemini2.5-pro:
+      type: "api"
+      module: "openai_client"
+      api_key: "xxxxx"
+      model: "google/gemini-2.5-pro"
+      api_base: "https://api.aimlapi.com/v1"
+      max_new_tokens: 3000
+      temperature: 0.1
+
+
+  GPT-4o:
+    type: "api"
+    module: "openai_client"
+    api_key: "xxxxx"
+    model: "gpt-4o"
+    api_base: "https://api.aimlapi.com/v1"
+    max_new_tokens: 3000
+    temperature: 0.1
+  
+  GPT-5:
+    type: "api"
+    module: "openai_client"
+    api_key: "xxxxx"
+    model: "openai/gpt-5-2025-08-07"
+    api_base: "https://api.aimlapi.com/v1"
+    max_new_tokens: 3000
+    temperature: 0.1
+
+  GPT-4.1:
+    type: "api"
+    module: "openai_client"
+    api_key: "xxxxx"
+    model: "openai/gpt-4.1-2025-04-14"
+    api_base: "https://api.aimlapi.com/v1"
+    max_new_tokens: 3000
+    temperature: 0.1
+
+
+  Claude-Sonnet-4:
+    type: "api"
+    module: "claude_client"
+    api_key: "xxxxx"
+    model: "anthropic/claude-sonnet-4"
+    api_base: "https://api.aimlapi.com"
+    max_new_tokens: 3000
+    temperature: 0.1
+
+  Claude-Sonnet-4.5:
+    type: "api"
+    module: "claude_client"
+    api_key: "xxxxx"
+    model: "claude-sonnet-4-5-20250929"
+    api_base: "https://api.aimlapi.com"
+    max_new_tokens: 3000
+    temperature: 0.1
+
+  Qwen2.5-VL-7B:
+    type: "general"
+    module: "qwen"
+    model_path: "../pretrained/qwen/Qwen2.5-VL-7B-Instruct"
+    trust_remote_code: true
+    max_new_tokens: 3000
+    temperature: 0.1
+
+  Qwen3-VL-8B-Instruct:
+    type: "general"
+    module: "qwen3"
+    model_path: "../pretrained/Qwen3-VL-8B-Instruct"
+    trust_remote_code: true
+    max_new_tokens: 3000
+    temperature: 0.1
+    
+  Qwen3-VL-8B-Thinking:
+    type: "general"
+    module: "qwen3"
+    model_path: "../pretrained/Qwen3-VL-8B-Thinking"
+    trust_remote_code: true
+    max_new_tokens: 3000
+    temperature: 0.1
+
+  Qwen3-VL-30B-Instruct:
+    type: "general"
+    module: "qwen3"
+    model_path: "../pretrained/Qwen3-VL-30B-A3B-Instruct"
+    trust_remote_code: true
+    max_new_tokens: 3000
+    temperature: 0.1
+    
+  Qwen3-VL-30B-Thinking:
+    type: "general"
+    module: "qwen3"
+    model_path: "../pretrained/Qwen3-VL-30B-A3B-Thinking"
+    trust_remote_code: true
+    max_new_tokens: 3000
+    temperature: 0.1
+
+
+  InternVL3_5-30B:
+    type: "general"
+    model_path: "../pretrained/InternVL3_5-30B-A3B"
+    module: "internvl"
+    image_size: 448
+    max_num_tiles: 12
+    use_flash_attn: true
+    load_in_8bit: false
+    max_new_tokens: 3000
+    temperature: 0.1
+
+  InternVL3_5-8B:
+    type: "general"
+    model_path: "../pretrained/InternVL3_5-8B"
+    module: "internvl"
+    # image_size: 448
+    max_num_tiles: 12
+    use_flash_attn: true
+    load_in_8bit: false
+    max_new_tokens: 3000
+    temperature: 0.1
+
+# Medical   
+  MedGemma-4B:
+    type: "medical"
+    model_path: "../pretrained/MedGemma-4B/medgemma-4b-it"  
+    module: "medgemma"
+    max_new_tokens: 3000
+    temperature: 0.1 
+
+  MedGemma-27B:
+    type: "medical"
+    model_path: "../pretrained/MedGemma-27B/medgemma-27b-it" 
+    module: "medgemma"
+    max_new_tokens: 3000
+    temperature: 0.1  
+
+
+  Lingshu-7B:
+    type: "medical"
+    model_path: "../pretrained/Lingshu-7B" 
+    module: "lingshu"
+    use_flash_attention: true
+    max_new_tokens: 128
+    temperature: 0.7
+    top_p: 0.9
+
+  Lingshu-32B:
+    type: "medical"
+    model_path: "../pretrained/Lingshu-32B" 
+    module: "lingshu"
+    use_flash_attention: true
+    max_new_tokens: 128
+    temperature: 0.7
+    top_p: 0.9

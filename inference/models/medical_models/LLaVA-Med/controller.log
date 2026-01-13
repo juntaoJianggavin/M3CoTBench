@@ -1,0 +1,17 @@
+2025-05-15 14:47:08 | INFO | controller | args: Namespace(host='0.0.0.0', port=10000, dispatch_method='shortest_queue')
+2025-05-15 14:47:08 | INFO | controller | Init controller
+2025-05-15 14:47:08 | ERROR | stderr | [32mINFO[0m:     Started server process [[36m978120[0m]
+2025-05-15 14:47:08 | ERROR | stderr | [32mINFO[0m:     Waiting for application startup.
+2025-05-15 14:47:08 | ERROR | stderr | [32mINFO[0m:     Application startup complete.
+2025-05-15 14:47:08 | ERROR | stderr | [32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:10000[0m (Press CTRL+C to quit)
+2025-05-15 14:47:12 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58840 - "[1mGET / HTTP/1.1[0m" [31m404 Not Found[0m
+2025-05-15 14:47:14 | INFO | stdout | [32mINFO[0m:     127.0.0.1:58840 - "[1mGET /favicon.ico HTTP/1.1[0m" [31m404 Not Found[0m
+2025-05-15 14:47:44 | ERROR | stderr | [32mINFO[0m:     Shutting down
+2025-05-15 14:47:44 | ERROR | stderr | [32mINFO[0m:     Waiting for application shutdown.
+2025-05-15 14:47:44 | ERROR | stderr | [32mINFO[0m:     Application shutdown complete.
+2025-05-15 14:47:44 | ERROR | stderr | [32mINFO[0m:     Finished server process [[36m978120[0m]
+2025-05-15 14:47:45 | ERROR | stderr | Exception ignored in: <module 'threading' from '/home/tione/notebook/miniconda3/envs/llava-med/lib/python3.10/threading.py'>
+2025-05-15 14:47:45 | ERROR | stderr | Traceback (most recent call last):
+2025-05-15 14:47:45 | ERROR | stderr |   File "/home/tione/notebook/miniconda3/envs/llava-med/lib/python3.10/threading.py", line 1567, in _shutdown
+2025-05-15 14:47:45 | ERROR | stderr |     lock.acquire()
+2025-05-15 14:47:45 | ERROR | stderr | KeyboardInterrupt:
