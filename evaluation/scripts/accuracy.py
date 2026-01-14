@@ -7,13 +7,16 @@ import requests
 import argparse
 
 # -----------------------------
-# Configuration: API Key & URL
+# Configuration Defaults
 # -----------------------------
-api_key = os.environ.get("AIMLAPI_KEY", "YOUR_API_KEY_HERE")
-base_url = os.environ.get("AIMLAPI_URL", "https://api.aimlapi.com/v1")
+# Prioritize environment variables; use default values if not set
+DEFAULT_API_KEY = os.environ.get("AIMLAPI_KEY", "YOUR_API_KEY_HERE")
+DEFAULT_BASE_URL = os.environ.get("AIMLAPI_URL", "https://api.aimlapi.com/v1")
 
+# Initialize global variables (will be overridden by main function arguments)
+api_key = DEFAULT_API_KEY
+base_url = DEFAULT_BASE_URL
 CHAT_URL = f"{base_url}/chat/completions"
-
 headers = {
     "Authorization": f"Bearer {api_key}",
     "Content-Type": "application/json"
@@ -42,6 +45,9 @@ def clean_gpt_response(content: str) -> str:
     return content.strip()
 
 def gpt_judge_match(question, answer, prediction, model_name="gpt-4o"):
+    # Use global headers and CHAT_URL
+    global headers, CHAT_URL
+    
     qtype = detect_question_type(question)
     if qtype == "short":
         type_instruction = (
@@ -140,6 +146,8 @@ def evaluate(json_path, excel_path, output_path=None, model_name="gpt-4o"):
     total, correct = 0, 0
 
     print(f"Starting evaluation using model: {model_name}")
+    print(f"Target API URL: {CHAT_URL}") # Print to verify URL
+
     for item in tqdm(prediction_data):
         index = int(item["index"])
         prediction = item.get("prediction", "").strip()
@@ -214,8 +222,23 @@ if __name__ == "__main__":
     parser.add_argument("--excel_path", type=str, required=True, help="Path to the ground truth Excel file.")
     parser.add_argument("--output_path", type=str, default="evaluation_results.json", help="Path to save the evaluation results JSON.")
     parser.add_argument("--model", type=str, default="gpt-4o", help="Model name to use for evaluation (default: gpt-4o).")
+    
+    # Add API configuration hyperparameters
+    parser.add_argument("--api_key", type=str, default=DEFAULT_API_KEY, help="API Key (defaults to env var AIMLAPI_KEY).")
+    parser.add_argument("--base_url", type=str, default=DEFAULT_BASE_URL, help="Base URL (defaults to env var AIMLAPI_URL).")
 
     args = parser.parse_args()
+
+    # Update global configuration based on arguments
+    api_key = args.api_key
+    base_url = args.base_url
+    
+    # Rebuild variables dependent on api_key and base_url
+    CHAT_URL = f"{base_url}/chat/completions"
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json"
+    }
 
     evaluate(
         json_path=args.json_path,
