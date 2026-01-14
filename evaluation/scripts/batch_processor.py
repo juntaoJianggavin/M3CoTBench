@@ -696,14 +696,14 @@ class ReasoningPathProcessor:
 def main():
     parser = argparse.ArgumentParser(description='Reasoning Path Processor - Read and analyze data from JSON files')
     parser.add_argument('--model', type=str, help='Specify model name to process (directory name)')
-    parser.add_argument('--result-dir', type=str, default=None, help='JSON file directory (default: script_dir/input_data)')
-    parser.add_argument('--output-dir', type=str, default=None, help='CSV output directory (default: script_dir/processed_output)')
-    parser.add_argument('--question-file', type=str, default=None, help='Question index Excel/JSON file (optional, JSON files may also contain question field)')
+    parser.add_argument('--result_dir', type=str, default=None, help='JSON file directory (default: script_dir/input_data)')
+    parser.add_argument('--output_dir', type=str, default=None, help='CSV output directory (default: script_dir/processed_output)')
+    parser.add_argument('--question_file', type=str, default=None, help='Question index Excel/JSON file (optional, JSON files may also contain question field)')
     parser.add_argument('--workers', type=int, default=8, help='Number of concurrent processes')
-    parser.add_argument('--retry-failed', action='store_true', help='Only process failed tasks (parse_status == false)')
-    parser.add_argument('--api-base-url', type=str, default=None, help='API base URL (optional)')
-    parser.add_argument('--api-key', type=str, default=None, help='API key (optional)')
-    parser.add_argument('--model-name', type=str, default=None, help='Model name for API (optional)')
+    parser.add_argument('--retry_failed', action='store_true', help='Only process failed tasks (parse_status == false)')
+    parser.add_argument('--api_base_url', type=str, default=None, help='API base URL (optional)')
+    parser.add_argument('--api_key', type=str, default=None, help='API key (optional)')
+    parser.add_argument('--model_name', type=str, default=None, help='Model name for API (optional)')
     
     args = parser.parse_args()
     
