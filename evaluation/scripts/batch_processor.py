@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
 Batch Reasoning Path Processor
-Reads Excel files from input directory and analyzes model responses using LLM APIs.
+Reads JSON files from input directory and analyzes model responses using LLM APIs.
 Supports true concurrent processing across multiple models.
 
-This module processes Excel files containing model predictions and extracts
+This module processes JSON files containing model predictions and extracts
 reasoning pathway information using the reasoning_analyzer module.
 """
 
@@ -38,10 +38,10 @@ class ReasoningPathProcessor:
         Initialize the batch processor
         
         Args:
-            result_dir: Input directory containing Excel files (default: script_dir/output_data)
+            result_dir: Input directory containing JSON files (default: script_dir/output_data)
             output_dir: Output directory for CSV files (default: script_dir/processed_output)
             max_workers: Number of concurrent processes
-            question_file: Path to Excel file containing question index mapping (optional)
+            question_file: Path to Excel file containing question index mapping (optional, default: M3CoTBench.xlsx)
             api_base_url: API base URL (optional, uses reasoning_analyzer default)
             api_key: API key (optional, uses reasoning_analyzer default)
             model_name: Model name (optional, uses reasoning_analyzer default)
@@ -83,7 +83,7 @@ class ReasoningPathProcessor:
         if question_file:
             qa_file = Path(question_file)
         else:
-            qa_file = script_dir / "question_index.xlsx"  # Default name
+            qa_file = script_dir / "M3CoTBench.xlsx"  # Default name: M3CoTBench.xlsx
         
         if qa_file.exists():
             try:
@@ -103,18 +103,18 @@ class ReasoningPathProcessor:
         else:
             print(f"{Fore.YELLOW}⚠️  Question index file not found: {qa_file}, will proceed without question context")
     
-    def find_excel_files(self, model_name: Optional[str] = None) -> List[Tuple[str, Path]]:
+    def find_json_files(self, model_name: Optional[str] = None) -> List[Tuple[str, Path]]:
         """
-        Find all Excel files to process
+        Find all JSON files to process
         
         Returns:
-            List[Tuple[model_name, excel_file_path]]
+            List[Tuple[model_name, json_file_path]]
         """
-        excel_files = []
+        json_files = []
         
         if not self.result_dir.exists():
             print(f"{Fore.RED}❌ Directory does not exist: {self.result_dir}")
-            return excel_files
+            return json_files
         
         # Traverse all subdirectories in result_dir
         for subdir in self.result_dir.iterdir():
@@ -125,64 +125,70 @@ class ReasoningPathProcessor:
             if model_name and subdir.name != model_name:
                 continue
             
-            # Find *_cot.xlsx files in this directory
-            cot_files = list(subdir.glob("*_cot.xlsx"))
+            # Find *_cot.json files in this directory
+            cot_files = list(subdir.glob("*_cot.json"))
             
             if cot_files:
-                # Usually each directory has only one *_cot.xlsx file
-                excel_file = cot_files[0]
-                model_name_from_file = excel_file.stem  # Remove .xlsx extension
-                excel_files.append((model_name_from_file, excel_file))
-                print(f"{Fore.BLUE}📄 Found file: {excel_file}")
+                # Usually each directory has only one *_cot.json file
+                json_file = cot_files[0]
+                model_name_from_file = json_file.stem  # Remove .json extension
+                json_files.append((model_name_from_file, json_file))
+                print(f"{Fore.BLUE}📄 Found file: {json_file}")
             else:
-                print(f"{Fore.YELLOW}⚠️  No *_cot.xlsx file found in directory {subdir.name}")
+                print(f"{Fore.YELLOW}⚠️  No *_cot.json file found in directory {subdir.name}")
         
-        return excel_files
+        return json_files
     
     def get_all_tasks(self, model_name: Optional[str] = None) -> List[Tuple]:
         """Get all tasks that need to be processed"""
-        excel_files = self.find_excel_files(model_name)
+        json_files = self.find_json_files(model_name)
         
-        if not excel_files:
-            print(f"{Fore.RED}❌ No Excel files found")
+        if not json_files:
+            print(f"{Fore.RED}❌ No JSON files found")
             return []
         
         all_tasks = []
         
-        for model_name_from_file, excel_file in excel_files:
+        for model_name_from_file, json_file in json_files:
             csv_file = self.output_dir / f"{model_name_from_file}.csv"
             
             # Create CSV template
-            self.create_csv_template(model_name_from_file, excel_file)
+            self.create_csv_template(model_name_from_file, json_file)
             
             # Load existing data
             existing_data = self.load_existing_data(csv_file)
             
-            # Read Excel data
+            # Read JSON data
             try:
-                print(f"{Fore.CYAN}📖 Reading Excel file: {excel_file}")
-                df = pd.read_excel(excel_file)
+                print(f"{Fore.CYAN}📖 Reading JSON file: {json_file}")
+                with open(json_file, 'r', encoding='utf-8') as f:
+                    json_data = json.load(f)
                 
-                # Check if required columns exist
-                if 'index' not in df.columns or 'prediction' not in df.columns:
-                    print(f"{Fore.RED}❌ Excel file missing required columns: index or prediction")
+                # Check if it's a list
+                if not isinstance(json_data, list):
+                    print(f"{Fore.RED}❌ JSON file must contain a list of objects")
                     continue
                 
                 # Prepare tasks and collect empty predictions to update
                 empty_predictions_to_update = {}
                 
-                for _, row in df.iterrows():
-                    # Check if index is empty
-                    if pd.isna(row['index']):
+                for item in json_data:
+                    # Check if index exists
+                    if 'index' not in item:
                         continue
                     
-                    index = int(row['index'])
+                    # Parse index (can be string or int)
+                    try:
+                        index = int(item['index'])
+                    except (ValueError, TypeError):
+                        print(f"{Fore.YELLOW}⚠️  Invalid index format: {item.get('index')}, skipping")
+                        continue
                     
                     # Process prediction field
-                    if pd.isna(row['prediction']):
+                    if 'prediction' not in item or not item['prediction']:
                         prediction = ''
                     else:
-                        prediction = str(row['prediction']).strip()
+                        prediction = str(item['prediction']).strip()
                     
                     # If prediction is empty
                     if not prediction:
@@ -230,8 +236,12 @@ class ReasoningPathProcessor:
                         existing_data[index].get('parse_status') == 'false'):
                         print(f"{Fore.CYAN}🔄 {model_name_from_file} index {index}: detected failed record, will reprocess")
                     
-                    # Get corresponding question
-                    question = self.question_map.get(index, '')
+                    # Get corresponding question - first check if JSON has 'question' field, otherwise use question_map
+                    question = ''
+                    if 'question' in item and item['question']:
+                        question = str(item['question']).strip()
+                    elif index in self.question_map:
+                        question = self.question_map[index]
                     
                     # Add task: (model_name, index, prediction, question, csv_file_path)
                     all_tasks.append((model_name_from_file, index, prediction, question, str(csv_file)))
@@ -245,8 +255,11 @@ class ReasoningPathProcessor:
                 
                 print(f"{Fore.GREEN}✅ Loaded {len([t for t in all_tasks if t[0] == model_name_from_file])} tasks from {model_name_from_file}")
                 
+            except json.JSONDecodeError as e:
+                print(f"{Fore.RED}❌ Failed to parse JSON file {json_file}: {e}")
+                continue
             except Exception as e:
-                print(f"{Fore.RED}❌ Failed to read Excel file {excel_file}: {e}")
+                print(f"{Fore.RED}❌ Failed to read JSON file {json_file}: {e}")
                 continue
         
         return all_tasks
@@ -256,15 +269,15 @@ class ReasoningPathProcessor:
         Get only failed tasks (parse_status == 'false')
         Used for incremental processing of failed records
         """
-        excel_files = self.find_excel_files(model_name)
+        json_files = self.find_json_files(model_name)
         
-        if not excel_files:
-            print(f"{Fore.RED}❌ No Excel files found")
+        if not json_files:
+            print(f"{Fore.RED}❌ No JSON files found")
             return []
         
         failed_tasks = []
         
-        for model_name_from_file, excel_file in excel_files:
+        for model_name_from_file, json_file in json_files:
             csv_file = self.output_dir / f"{model_name_from_file}.csv"
             
             # If CSV file doesn't exist, no failed records
@@ -274,26 +287,30 @@ class ReasoningPathProcessor:
             # Load existing data
             existing_data = self.load_existing_data(csv_file)
             
-            # Read Excel data
+            # Read JSON data
             try:
-                df = pd.read_excel(excel_file)
+                with open(json_file, 'r', encoding='utf-8') as f:
+                    json_data = json.load(f)
                 
-                # Check if required columns exist
-                if 'index' not in df.columns or 'prediction' not in df.columns:
+                # Check if it's a list
+                if not isinstance(json_data, list):
                     continue
                 
                 # Find failed tasks
-                for _, row in df.iterrows():
-                    if pd.isna(row['index']):
+                for item in json_data:
+                    if 'index' not in item:
                         continue
                     
-                    index = int(row['index'])
+                    try:
+                        index = int(item['index'])
+                    except (ValueError, TypeError):
+                        continue
                     
                     # Process prediction field
-                    if pd.isna(row['prediction']):
+                    if 'prediction' not in item or not item['prediction']:
                         prediction = ''
                     else:
-                        prediction = str(row['prediction']).strip()
+                        prediction = str(item['prediction']).strip()
                     
                     # Skip empty predictions
                     if not prediction:
@@ -302,18 +319,22 @@ class ReasoningPathProcessor:
                     # Only process failed records (parse_status == 'false')
                     if (index in existing_data and 
                         existing_data[index].get('parse_status') == 'false'):
-                        # Get corresponding question
-                        question = self.question_map.get(index, '')
+                        # Get corresponding question - first check if JSON has 'question' field, otherwise use question_map
+                        question = ''
+                        if 'question' in item and item['question']:
+                            question = str(item['question']).strip()
+                        elif index in self.question_map:
+                            question = self.question_map[index]
                         failed_tasks.append((model_name_from_file, index, prediction, question, str(csv_file)))
                         print(f"{Fore.CYAN}🔄 Added failed retry task: {model_name_from_file} index {index}")
                 
             except Exception as e:
-                print(f"{Fore.RED}❌ Failed to read Excel file {excel_file}: {e}")
+                print(f"{Fore.RED}❌ Failed to read JSON file {json_file}: {e}")
                 continue
         
         return failed_tasks
     
-    def create_csv_template(self, model_name: str, excel_file: Path, max_index: int = 1079):
+    def create_csv_template(self, model_name: str, json_file: Path, max_index: int = 1079):
         """Create CSV template file"""
         csv_file = self.output_dir / f"{model_name}.csv"
         
@@ -321,11 +342,20 @@ class ReasoningPathProcessor:
         if not csv_file.exists():
             print(f"{Fore.BLUE}📝 Creating CSV template: {csv_file}")
             
-            # Try to get max index from Excel file
+            # Try to get max index from JSON file
             try:
-                df = pd.read_excel(excel_file)
-                if 'index' in df.columns:
-                    max_index = int(df['index'].max())
+                with open(json_file, 'r', encoding='utf-8') as f:
+                    json_data = json.load(f)
+                if isinstance(json_data, list):
+                    indices = []
+                    for item in json_data:
+                        if 'index' in item:
+                            try:
+                                indices.append(int(item['index']))
+                            except (ValueError, TypeError):
+                                pass
+                    if indices:
+                        max_index = max(indices)
             except:
                 pass
             
@@ -664,11 +694,11 @@ class ReasoningPathProcessor:
                 # Continue processing other models, don't interrupt entire flow
 
 def main():
-    parser = argparse.ArgumentParser(description='Reasoning Path Processor - Read and analyze data from Excel files')
+    parser = argparse.ArgumentParser(description='Reasoning Path Processor - Read and analyze data from JSON files')
     parser.add_argument('--model', type=str, help='Specify model name to process (directory name)')
-    parser.add_argument('--result-dir', type=str, default=None, help='Excel file directory (default: script_dir/input_data)')
+    parser.add_argument('--result-dir', type=str, default=None, help='JSON file directory (default: script_dir/input_data)')
     parser.add_argument('--output-dir', type=str, default=None, help='CSV output directory (default: script_dir/processed_output)')
-    parser.add_argument('--question-file', type=str, default=None, help='Question index Excel file (optional)')
+    parser.add_argument('--question-file', type=str, default=None, help='Question index Excel/JSON file (optional, JSON files may also contain question field)')
     parser.add_argument('--workers', type=int, default=8, help='Number of concurrent processes')
     parser.add_argument('--retry-failed', action='store_true', help='Only process failed tasks (parse_status == false)')
     parser.add_argument('--api-base-url', type=str, default=None, help='API base URL (optional)')
