@@ -217,8 +217,9 @@ You can run metrics individually. For example, to evaluate recall:
 ```
 bash scripts/recall.sh
 bash scripts/precision.sh
-Note: Simply update the data path for YOUR_MODEL_NAME inside recall.sh (or other script files).
 ```
+Note: Simply update the data path for YOUR_MODEL_NAME inside recall.sh (or other script files).
+
 After the GPT evaluation, you should see a cache/ directory structured as follows:
 ```
 📂 cache
@@ -270,8 +271,8 @@ python scripts/accuracy.py \
   --excel_path "../inference/dataset/M3CoTBench.xlsx" \
   --output_path "Qwen3-VL-30B-Thinking_direct.json" \
   --model "gpt-4o" \
-   --api_key  "sk-your-api-key-here" \
-  --base_url "sk-your-api-url-here"\
+  --api_key  "sk-your-api-key-here" \
+  --base_url "sk-your-api-url-here"
 ```
 Evaluate the cot answer:
 ```
@@ -326,11 +327,16 @@ We use GPT-4o and Gemini-2.5-Pro for evaluation and average the results.
 ```
 python scripts/batch_processor.py \
   --result_dir "../inference/final_output/" \
-  --output_dir "./final_consistency_results" \
+  --output_dir "./final_consistency_results_gpt4o" \
   --question_file "../inference/dataset/M3CoTBench.xlsx" \
   --api-base-url "sk-your-api-url-here" \
   --api_key "sk-your-api-key-here" \
   --model_name gpt-4o
+
+python lcs_analyzer.py
+--type_file "../inference/dataset/type.xlsx" \
+--csv_dir "./final_consistency_results_gpt4o" \
+--output_dir "./consistency_score_gpt4o" 
 ```
 ```
 python scripts/batch_processor.py \
@@ -340,13 +346,14 @@ python scripts/batch_processor.py \
   --api-base-url "sk-your-api-url-here" \
   --api_key "sk-your-api-key-here" \
   --model_name gemini-2.5-pro
-
 python lcs_analyzer.py
 --type_file "../inference/dataset/type.xlsx" \
---csv_dir "./final_consistency_results" \
---output_dir "./output" \
+--csv_dir "./final_consistency_results_gemini" \
+--output_dir "./consistency_score_gemini" 
+
 ```
 
+Then the consistency score will be in "./consistency_score_gpt4o/lcs_results/lcs_analyzer_zh_summary.csv" and "./consistency_score_gemini/lcs_results/lcs_analyzer_zh_summary.csv".The column named "overall_average_similarity" contains the consistency score. You only need to average the two results.
 
 
 
