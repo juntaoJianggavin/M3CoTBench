@@ -212,6 +212,7 @@ python tools/update_lmmseval_json.py
 ```
 
 Step 3. Run Evaluation Scripts
+
 You can run metrics individually. For example, to evaluate recall:
 ```
 bash scripts/recall.sh
