@@ -457,7 +457,7 @@ We would like to acknowledge that some parts of the code were inspired by and re
 
 # :black_nib:Citation
 
-If you If you find [M3CoTBench](https://juntaojianggavin.github.io/projects/M3CoTBench/) useful for your research, please consider giving a star⭐ and citation📝 :)
+If you find [M3CoTBench](https://juntaojianggavin.github.io/projects/M3CoTBench/) useful for your research, please consider giving a star⭐ and citation📝 :)
 
 ```
 @misc{jiang2026m3cotbenchbenchmarkchainofthoughtmllms,
