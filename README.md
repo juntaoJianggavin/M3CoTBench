@@ -21,7 +21,7 @@
     ·
     <a href="https://person.zju.edu.cn/yongliu"><strong>Yong Liu <sup>1†</sup></strong></a>
     ·
-    <a href="https://huuxiaobin.github.io/"><strong>Xiaobin Hu <sup>2</sup></strong></a>
+    <a href="https://huuxiaobin.github.io/"><strong>Xiaobin Hu <sup>5</sup></strong></a>
     ·
     <a href="https://yanshuicheng.info/"><strong>Shuicheng Yan <sup>5</sup></strong></a>
 </p>
