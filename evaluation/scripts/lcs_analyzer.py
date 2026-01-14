@@ -4,56 +4,13 @@ LCS (Longest Common Subsequence) Reasoning Path Similarity Analyzer
 Finds the mode path first, then calculates LCS similarity with each path.
 
 Usage:
-    1. Modify the configuration section below to set correct file paths
-    2. Run script: python lcs_analyzer.py
-    3. Or call via code:
-       analyzer = LCSAnalyzer()
-       analyzer.run_analysis()
+    1. Run with default settings:
+       python lcs_analyzer.py
+    2. Run with custom paths (hyperparameters):
+       python lcs_analyzer.py --type_file "path/to/type.xlsx" --csv_dir "path/to/csvs"
 """
 
-# ============================================================
-# ========== Configuration Section - Modify as needed ==========
-# ============================================================
-
-# Question type Excel file path (relative to script directory)
-# This file should contain 'index' and 'analysis_type' columns
-TYPE_FILE = "example_data/input_data/type.xlsx"
-
-# CSV file directory (relative to script directory)
-# This directory should contain all model CSV files (e.g., model1.csv, model2.csv, etc.)
-# CSV files should contain the following fields: index, modality_order, feature_order, conclusion_order, others_order
-CSV_DIR = "example_data/processed_output"
-
-# Output directory (relative to script directory)
-# Analysis results will be saved to this directory, including:
-# - CSV report file (consistency report)
-# - Plots directory (visualization charts directory)
-# If set to None or empty string, uses script directory
-OUTPUT_DIR = "example_data/analysis_results"  # None means use script directory
-
-# CSV report filename (without path, filename only)
-# If set to None, uses default filename "lcs_analysis_summary.csv"
-OUTPUT_CSV_FILENAME = None  # None means use default filename
-
-# Plots directory name (without path, directory name only)
-# If set to None, uses default directory name "lcs_analysis_plots"
-OUTPUT_PLOTS_DIRNAME = None  # None means use default directory name
-
-# Field mapping configuration (CSV fields -> reasoning types)
-# CSV fields: modality_order, feature_order, conclusion_order, others_order
-# Maps to reasoning types: modality, observation, conclusion, knowledge
-# For better readability of results
-FIELD_MAPPING = {
-    'modality_order': 'modality',
-    'feature_order': 'observation',  # feature maps to observation
-    'conclusion_order': 'conclusion',
-    'others_order': 'knowledge'  # others maps to knowledge
-}
-
-# ============================================================
-# ========== Implementation Section - Usually no modification needed ==========
-# ============================================================
-
+import argparse
 import pandas as pd
 import numpy as np
 import seaborn as sns
@@ -63,6 +20,29 @@ import os
 from collections import Counter, defaultdict
 import warnings
 warnings.filterwarnings('ignore')
+
+# ============================================================
+# ========== Configuration Defaults ==========
+# ============================================================
+
+# Default paths (used if no command line arguments are provided)
+DEFAULT_TYPE_FILE = "example_data/input_data/type.xlsx"
+DEFAULT_CSV_DIR = "example_data/processed_output"
+DEFAULT_OUTPUT_DIR = "example_data/analysis_results"
+
+# CSV report filename (without path, filename only)
+OUTPUT_CSV_FILENAME = "lcs_analysis_summary.csv"
+
+# Plots directory name (without path, directory name only)
+OUTPUT_PLOTS_DIRNAME = "lcs_analysis_plots"
+
+# Field mapping configuration (CSV fields -> reasoning types)
+FIELD_MAPPING = {
+    'modality_order': 'modality',
+    'feature_order': 'observation',  # feature maps to observation
+    'conclusion_order': 'conclusion',
+    'others_order': 'knowledge'  # others maps to knowledge
+}
 
 # ============================================================
 # Matplotlib Configuration
@@ -87,31 +67,30 @@ class LCSAnalyzer:
         Initialize analyzer
         
         Args:
-            type_file: Question type Excel file path (defaults to configured path)
-            csv_dir: CSV file directory path (defaults to configured path)
-            output_dir: Output directory path (defaults to configured path, None means use script directory)
-            output_csv_filename: CSV report filename (defaults to configured filename, None means use default filename)
-            output_plots_dirname: Plots directory name (defaults to configured directory name, None means use default directory name)
+            type_file: Question type Excel file path
+            csv_dir: CSV file directory path
+            output_dir: Output directory path
+            output_csv_filename: CSV report filename
+            output_plots_dirname: Plots directory name
         """
-        # Use configuration or provided parameters
         project_root = Path(__file__).parent
-        self.type_file = project_root / (type_file or TYPE_FILE)
-        self.csv_dir = project_root / (csv_dir or CSV_DIR)
+        
+        # Use provided parameters or defaults
+        self.type_file = Path(type_file) if type_file else project_root / DEFAULT_TYPE_FILE
+        self.csv_dir = Path(csv_dir) if csv_dir else project_root / DEFAULT_CSV_DIR
         
         # Set output directory
-        if output_dir is not None:
-            self.output_dir = project_root / output_dir
-        elif OUTPUT_DIR:
-            self.output_dir = project_root / OUTPUT_DIR
+        if output_dir:
+            self.output_dir = Path(output_dir)
         else:
-            self.output_dir = project_root  # Default to script directory
+            self.output_dir = project_root / DEFAULT_OUTPUT_DIR
         
         # Ensure output directory exists
         self.output_dir.mkdir(parents=True, exist_ok=True)
         
         # Set output filename and directory name
-        self.output_csv_filename = output_csv_filename or OUTPUT_CSV_FILENAME or "lcs_analysis_summary.csv"
-        self.output_plots_dirname = output_plots_dirname or OUTPUT_PLOTS_DIRNAME or "lcs_analysis_plots"
+        self.output_csv_filename = output_csv_filename or OUTPUT_CSV_FILENAME
+        self.output_plots_dirname = output_plots_dirname or OUTPUT_PLOTS_DIRNAME
         
         self.analysis_types = None
         self.model_data = {}
@@ -226,9 +205,6 @@ class LCSAnalyzer:
         
         try:
             # Read CSV file (supports multiple encodings, handles Windows-edited files)
-            # utf-8-sig: automatically handles BOM (Byte Order Mark), reads correctly whether file has BOM or not
-            # utf-8: standard UTF-8 encoding (no BOM)
-            # latin-1, cp1252: Windows common encodings (fallback)
             encodings = ['utf-8-sig', 'utf-8', 'latin-1', 'cp1252']
             df = None
             encoding_used = None
@@ -245,7 +221,7 @@ class LCSAnalyzer:
                 print(f"  ❌ Unable to read CSV file (encoding issue)")
                 return
             
-            # If non-utf-8-sig encoding used, note it (may have been edited in Windows)
+            # If non-utf-8-sig encoding used, note it
             if encoding_used and encoding_used != 'utf-8-sig':
                 print(f"  ⚠️  Read using {encoding_used} encoding (file may have been edited in Windows)")
             
@@ -327,7 +303,7 @@ class LCSAnalyzer:
                     'path_similarity_details': path_similarity_details
                 }
             
-            # Calculate overall average similarity (average by type count, not weighted by record count)
+            # Calculate overall average similarity
             type_similarities = [data['weighted_similarity'] for data in model_consistency.values()]
             overall_average_similarity = np.mean(type_similarities) if type_similarities else 0
             
@@ -467,7 +443,7 @@ class LCSAnalyzer:
         print("\n🎨 Creating consistency visualization charts")
         print("=" * 60)
         
-        # Configure matplotlib basic settings (all chart text uses English, no special font config needed)
+        # Configure matplotlib basic settings
         setup_matplotlib()
         
         # Create plots directory
@@ -500,7 +476,7 @@ class LCSAnalyzer:
         # Add value labels
         for i, (bar, similarity) in enumerate(zip(bars, model_avg_consistency.values)):
             plt.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.01, 
-                    f'{similarity:.3f}', ha='center', va='bottom')
+                     f'{similarity:.3f}', ha='center', va='bottom')
         
         plt.tight_layout()
         plt.savefig(plots_dir / 'consistency_ranking.png', dpi=300, bbox_inches='tight')
@@ -539,11 +515,11 @@ class LCSAnalyzer:
             # Create heatmap
             plt.figure(figsize=(10, 8))
             sns.heatmap(similarity_matrix, annot=True, fmt='.3f', cmap='RdYlBu_r',
-                       xticklabels=all_models, yticklabels=all_models)
+                        xticklabels=all_models, yticklabels=all_models)
             plt.title(f'{analysis_type} - Cross-Model Mode Path Similarity')
             plt.tight_layout()
             plt.savefig(plots_dir / f'{analysis_type}_cross_model_similarity.png', 
-                       dpi=300, bbox_inches='tight')
+                        dpi=300, bbox_inches='tight')
             plt.close()
         
         print("  📊 Cross-model similarity heatmap saved")
@@ -570,11 +546,11 @@ class LCSAnalyzer:
             # Add value labels
             for bar, count in zip(bars, type_data['count']):
                 plt.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 0.1, 
-                        str(count), ha='center', va='bottom')
+                         str(count), ha='center', va='bottom')
             
             plt.tight_layout()
             plt.savefig(plots_dir / f'{analysis_type}_mode_path_distribution.png', 
-                       dpi=300, bbox_inches='tight')
+                        dpi=300, bbox_inches='tight')
             plt.close()
         
         print("  📊 Mode path distribution plot saved")
@@ -606,10 +582,26 @@ class LCSAnalyzer:
             print("\n❌ Analysis failed, no valid data generated")
 
 def main():
-    """Main function"""
-    analyzer = LCSAnalyzer()
+    """Main function handling argument parsing"""
+    parser = argparse.ArgumentParser(description="LCS Reasoning Path Similarity Analyzer")
+    
+    parser.add_argument('--type_file', type=str, default=DEFAULT_TYPE_FILE,
+                        help=f'Path to the question type Excel file (default: {DEFAULT_TYPE_FILE})')
+    
+    parser.add_argument('--csv_dir', type=str, default=DEFAULT_CSV_DIR,
+                        help=f'Directory containing model CSV files (default: {DEFAULT_CSV_DIR})')
+    
+    parser.add_argument('--output_dir', type=str, default=DEFAULT_OUTPUT_DIR,
+                        help=f'Directory to save analysis results (default: {DEFAULT_OUTPUT_DIR})')
+
+    args = parser.parse_args()
+    
+    analyzer = LCSAnalyzer(
+        type_file=args.type_file,
+        csv_dir=args.csv_dir,
+        output_dir=args.output_dir
+    )
     analyzer.run_analysis()
 
 if __name__ == "__main__":
     main()
-
