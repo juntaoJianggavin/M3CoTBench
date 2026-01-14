@@ -36,11 +36,9 @@
 </p>
 
 <p align="center">
-      <img src='https://img.shields.io/badge/arXiv-PDF-red?style=flat&logo=arXiv&logoColor=red' alt='arXiv PDF'>
-         </a>
+    <a href="https://arxiv.org/abs/2601.08758"><img src='https://img.shields.io/badge/arXiv-PDF-red?style=flat&logo=arXiv&logoColor=red' alt='arXiv PDF'></a>
 <a href="https://huggingface.co/datasets/APRIL-AIGC/M3CoTBench"><img src="https://img.shields.io/static/v1?label=%F0%9F%A4%97%20Hugging%20Face&message=Dataset&color=yellow"></a>
-    <a href='https://juntaojianggavin.github.io/projects/M3CoTBench'>
-      <img src='https://img.shields.io/badge/M3CoTBench-Website-green?style=flat&logo=googlechrome&logoColor=green' alt='webpage-Web'>
+    <a href='https://juntaojianggavin.github.io/projects/M3CoTBench'><img src='https://img.shields.io/badge/M3CoTBench-Website-green?style=flat&logo=googlechrome&logoColor=green' alt='webpage-Web'>
          </a>
 </p>
 <a name="introduction"></a>
