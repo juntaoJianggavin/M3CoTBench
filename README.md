@@ -201,17 +201,21 @@ python recalculate_summary.py \
 ### 4. Evaluation
 
 #### Correctness
-Step 1: Merge Chain-of-Thought Fields Merge the CoT steps of the correct answers and convert the format to XLSX.
+**Step 1: Merge Chain-of-Thought Fields.**
+
+Merge the CoT steps of the correct answers and convert the format to XLSX.
 ```
 cd M3CoTBench/evaluation/
 python combine_fields.py
 ```
-Step 2: Format Inference Results Batch format the inference JSON files into the evaluation output format (XLSX). This file will contain both the CoT of the correct answer and the predicted answer from the inference.
+**Step 2: Reformat results.**
+
+Format Inference Results Batch format the inference JSON files into the evaluation output format (XLSX). This file will contain both the CoT of the correct answer and the predicted answer from the inference.
 ```
 python tools/update_lmmseval_json.py
 ```
 
-Step 3. Run Evaluation Scripts
+**Step 3. Run Evaluation Scripts.**
 
 You can run metrics individually. For example, to evaluate recall:
 ```
@@ -232,7 +236,8 @@ After the GPT evaluation, you should see a cache/ directory structured as follow
     ┗━━ 📂 YOUR_MODEL_NAME
 ```
 
-Step 4. Calculate Metrics for P, R and F1
+**Step 4. Calculate Metrics for P, R and F1.**
+
 We cache the evaluation results for all questions in the cache directory. Here, we read results from the cache to calculate the final metrics.
 
 For example, to calculate correctness.py:
@@ -263,7 +268,8 @@ Then you can see a directory structured as follows:
 The P, R, F1 scores are stored in "quality_results.json".
 
 
-Step 5. Calculate Accuracies for the answers
+**Step 5. Calculate Accuracies for the answers.**
+
 Evaluate the direct answer:
 ```
 python scripts/accuracy.py \
@@ -286,7 +292,7 @@ python scripts/accuracy.py \
 ```
 Then the impact score can be calculated.
 
-Step 6. Calculate the Efficiency Metrics for the Output Steps
+**Step 6. Calculate the Efficiency Metrics for the Output Steps.**
 
 The durations for direct and CoT inferences are in the summary output file (e.g. Claude-Sonnet-4.5_summary.json).
 ```
@@ -321,7 +327,7 @@ The total matched steps can be seen in the output file for recall scores in "rec
 ```
 Then the Efficiency Score can be obtained by: total_matched_steps/total_successful_time_s_cot=2100/13598.9917=0.1544
 
-Step 7. Calculate the Consistency Score for the Output Steps
+**Step 7. Calculate the Consistency Score for the Output Steps.**
 
 We use GPT-4o and Gemini-2.5-Pro for evaluation and average the results.
 ```
@@ -333,7 +339,7 @@ python scripts/batch_processor.py \
   --api_key "sk-your-api-key-here" \
   --model_name gpt-4o
 
-python lcs_analyzer.py
+python scripts/lcs_analyzer.py
 --type_file "../inference/dataset/type.xlsx" \
 --csv_dir "./final_consistency_results_gpt4o" \
 --output_dir "./consistency_score_gpt4o" 
@@ -346,7 +352,7 @@ python scripts/batch_processor.py \
   --api-base-url "sk-your-api-url-here" \
   --api_key "sk-your-api-key-here" \
   --model_name gemini-2.5-pro
-python lcs_analyzer.py
+python scripts/lcs_analyzer.py
 --type_file "../inference/dataset/type.xlsx" \
 --csv_dir "./final_consistency_results_gemini" \
 --output_dir "./consistency_score_gemini" 
