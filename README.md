@@ -270,6 +270,8 @@ python scripts/accuracy.py \
   --excel_path "../inference/M3CoTBench.xlsx" \
   --output_path "Qwen3-VL-30B-Thinking_direct.json" \
   --model "gpt-4o"
+   --api_key  ""
+  --base_url ""
 ```
 Evaluate the cot answer:
 ```
@@ -278,6 +280,8 @@ python scripts/accuracy.py \
   --excel_path "../inference/M3CoTBench.xlsx" \
   --output_path "Qwen3-VL-30B-Thinking_cot.json" \
   --model "gpt-4o"
+  --api_key  ""
+  --base_url ""
 ```
 Then the impact score can be calculated.
 
