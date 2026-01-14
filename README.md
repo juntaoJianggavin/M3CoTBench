@@ -462,6 +462,15 @@ We would like to acknowledge that some parts of the code were inspired by and re
 If you If you find [M3CoTBench](https://juntaojianggavin.github.io/projects/M3CoTBench/) useful for your research, please consider giving a star⭐ and citation📝 :)
 
 ```
+@misc{jiang2026m3cotbenchbenchmarkchainofthoughtmllms,
+      title={M3CoTBench: Benchmark Chain-of-Thought of MLLMs in Medical Image Understanding}, 
+      author={Juntao Jiang and Jiangning Zhang and Yali Bi and Jinsheng Bai and Weixuan Liu and Weiwei Jin and Zhucun Xue and Yong Liu and Xiaobin Hu and Shuicheng Yan},
+      year={2026},
+      eprint={2601.08758},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV},
+      url={https://arxiv.org/abs/2601.08758}, 
+}
 ```
 
 
