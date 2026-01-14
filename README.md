@@ -247,8 +247,22 @@ Alternatively, you can calculate each metric individually. For example, to calcu
 ```
 python final_score/recall.py --cache_dir cache/recall --save_path final_results
 ```
+Then you can see a directory structured as follows:
+```
+📂final_results/
+├─ 📂recall/
+│  ├─ 📄recall_results.json
+│  └─ 📄recall_errors.json
+├─ 📂precision/
+│  ├─ 📄precision_results.json
+│  └─ 📄precision_errors.json
+└─ 📂quality/
+   └─ 📄quality_results.json
+```
+The P, R, F1 scores are stored in "quality_results.json".
 
-Step 5. Cacualte Accuracies for the answers
+
+Step 5. Calculate Accuracies for the answers
 Evaluate the direct answer:
 ```
 python scripts/accuracy.py \
@@ -265,9 +279,44 @@ python scripts/accuracy.py \
   --output_path "Qwen3-VL-30B-Thinking_cot.json" \
   --model "gpt-4o"
 ```
-Then the impact score can be caculated.
+Then the impact score can be calculated.
 
-Step 6. Caculate Consistencies for the Output Steps
+Step 6. Calculate the Efficiency Metrics for the Output Steps
+
+The durations for direct and CoT inferences are in the summary output file (e.g. Claude-Sonnet-4.5_summary.json).
+```
+{
+    "cot": {
+        "total_item_count": 1079,
+        "successful_item_count": 1079,
+        "failed_item_count": 0,
+        "total_successful_time_s": 13598.991699999999,
+        "total_wasted_time_s": 75.924144786
+    },
+    "direct": {
+        "total_item_count": 1079,
+        "successful_item_count": 1079,
+        "failed_item_count": 0,
+        "total_successful_time_s": 5051.896599999994,
+        "total_wasted_time_s": 63.773742768000005
+    }
+}
+```
+Then the Latency score can be obtained: total_successful_time_s_cot/total_successful_time_s_direct= 13598.991699999999/5051.896599999994.
+
+The total matched steps can be seen in the output file for recall scores in "recall_results.json: in "final_results/recall/".
+```
+"Claude-Sonnet-4.5": {
+        "overall_metrics": {
+            "average_recall": 0.5971,
+            "total_matched_steps": 2100
+        },
+
+...
+```
+Then the Efficiency Score can be obtained by: total_matched_steps/total_successful_time_s_cot=2100/13598.991699999999
+
+Step 7. Calculate the Consistency Score for the Output Steps
 
 Under construction.
 
