@@ -72,7 +72,9 @@ Compared with existing multimodal medical benchmarks, our proposed **M3CoTBench*
 - [Installation](#installation)  
   - [Install requirements](#1-install-requirements)  
   - [Download M3CoTBench Database](#2-downloads-the-m3cotbench-database)  
-- [Usage](#usage)  
+- [Usage](#usage)
+  - [Inference](#inference)  
+  - [Evaluation](#evaluation)  
 - [Experiments](#experiments)
 - [Acknowlegments](#acknowledgments)  
 - [Citation](#citation)  
@@ -125,7 +127,12 @@ Then put the M3CoTBench.xlsx and images/ into the M3CoTBench/inference/datasets/
 <a name="usage"></a>
 
 # :muscle:Usage
+
+<a name="inference"></a>
 ### 3. Inference
+
+If you want to run your own model, you can follow the procedure below, but you’re also free to run the experiments in whichever way you prefer. One approach uses a CoT prompt, and the other directly outputs the results, which can then go straight into the evaluation section.
+
 Enter the directory:
 ```
 cd M3CoTBench/inference/
@@ -199,8 +206,7 @@ python recalculate_summary.py \
 ```
 
 ### 4. Evaluation
-
-#### Correctness
+<a name="evaluation"></a>
 **Step 1: Merge Chain-of-Thought Fields.**
 
 Merge the CoT steps of the correct answers and convert the format to XLSX.
