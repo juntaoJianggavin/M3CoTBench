@@ -302,7 +302,7 @@ The durations for direct and CoT inferences are in the summary output file (e.g.
     }
 }
 ```
-Then the Latency score can be obtained: total_successful_time_s_cot/total_successful_time_s_direct= 13598.991699999999/5051.896599999994.
+Then the Latency score can be obtained by: total_successful_time_s_cot/total_successful_time_s_direct= 13598.9917/5051.8966=2.69.
 
 The total matched steps can be seen in the output file for recall scores in "recall_results.json: in "final_results/recall/".
 ```
@@ -314,7 +314,7 @@ The total matched steps can be seen in the output file for recall scores in "rec
 
 ...
 ```
-Then the Efficiency Score can be obtained by: total_matched_steps/total_successful_time_s_cot=2100/13598.991699999999
+Then the Efficiency Score can be obtained by: total_matched_steps/total_successful_time_s_cot=2100/13598.9917=0.1544
 
 Step 7. Calculate the Consistency Score for the Output Steps
 
