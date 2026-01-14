@@ -267,21 +267,21 @@ Evaluate the direct answer:
 ```
 python scripts/accuracy.py \
   --json_path "../inference/final_output/Qwen3-VL-30B-Thinking/Qwen3-VL-30B-Thinking_direct.json" \
-  --excel_path "../inference/M3CoTBench.xlsx" \
+  --excel_path "../inference/dataset/M3CoTBench.xlsx" \
   --output_path "Qwen3-VL-30B-Thinking_direct.json" \
-  --model "gpt-4o"
-   --api_key  ""
-  --base_url ""
+  --model "gpt-4o" \
+   --api_key  "sk-your-api-key-here" \
+  --base_url "sk-your-api-url-here"\
 ```
 Evaluate the cot answer:
 ```
 python scripts/accuracy.py \
   --json_path "../inference/final_output/Qwen3-VL-30B-Thinking/Qwen3-VL-30B-Thinking_cot.json" \
-  --excel_path "../inference/M3CoTBench.xlsx" \
+  --excel_path "../inference/dataset/M3CoTBench.xlsx" \
   --output_path "Qwen3-VL-30B-Thinking_cot.json" \
-  --model "gpt-4o"
-  --api_key  ""
-  --base_url ""
+  --model "gpt-4o" \
+  --api_key  "sk-your-api-key-here"\
+  --base_url "sk-your-api-url-here"
 ```
 Then the impact score can be calculated.
 
@@ -322,9 +322,33 @@ Then the Efficiency Score can be obtained by: total_matched_steps/total_successf
 
 Step 7. Calculate the Consistency Score for the Output Steps
 
-Under construction.
+We use GPT-4o and Gemini-2.5-Pro for evaluation and average the results.
+```
+python scripts/batch_processor.py \
+  --result_dir "../inference/final_output/" \
+  --output_dir "./final_consistency_results" \
+  --question_file "../inference/dataset/M3CoTBench.xlsx" \
+  --api-base-url "sk-your-api-url-here" \
+  --api_key "sk-your-api-key-here" \
+  --model_name gpt-4o
+```
+```
+python scripts/batch_processor.py \
+  --result_dir "../inference/final_output/" \
+  --output_dir "./final_consistency_results" \
+  --question_file "../inference/dataset/M3CoTBench.xlsx" \
+  --api-base-url "sk-your-api-url-here" \
+  --api_key "sk-your-api-key-here" \
+  --model_name gemini-2.5-pro
 
-<a name="experiments"></a>
+python lcs_analyzer.py
+--type_file "../inference/dataset/type.xlsx" \
+--csv_dir "./final_consistency_results" \
+--output_dir "./output" \
+```
+
+
+
 
 # :bar_chart:Experiments
 
